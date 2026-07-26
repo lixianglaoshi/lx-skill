@@ -83,7 +83,7 @@ def validate(expected_hash: str) -> list[str]:
             if skill_id not in text:
                 errors.append(f"{name}: missing skill id {skill_id}")
 
-        if "https://github.com/lxqq66/lx-skill.git" not in text:
+        if "https://github.com/lixianglaoshi/lx-skill.git" not in text:
             errors.append(f"{name}: missing canonical clone URL")
 
     return errors
