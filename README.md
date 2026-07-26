@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: c7f4df2f992d2eb6bd2a3d10f5ee5603ecef7f1caa68667f71ca81186874a3dc -->
+<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
 
 简体中文 | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -57,11 +57,47 @@ Use $lx-ai-learning-coach to teach me SQL through guided practice. Ask one core 
 ## 下载
 
 ```bash
-git clone https://github.com/lxqq66/lx-skill.git
+git clone https://github.com/lixianglaoshi/lx-skill.git
 cd lx-skill
 ```
 
 公开仓库允许任何人查看和下载。其他用户不能直接修改本仓库；他们可以在自己的 fork 中修改或提交 Pull Request，但只有仓库所有者或被授予写入权限的协作者才能合并并改变本仓库。这样既方便公开下载，也保留后续持续更新能力。
+
+## 安装到国内 Agent
+
+### Kimi Code
+
+Kimi Code 的个人 skills 目录是 `~/.kimi-code/skills/`，同时也会读取通用目录 `~/.agents/skills/`：
+
+```bash
+mkdir -p ~/.kimi-code/skills
+cp -R skills/lx-* ~/.kimi-code/skills/
+```
+
+重新开启会话后，可以用 `/skill:lx-ai-learning-coach` 等命令显式调用，也可以让 Kimi Code 根据 `description` 自动选择。
+
+### ZCode
+
+```bash
+mkdir -p ~/.zcode/skills
+cp -R skills/lx-* ~/.zcode/skills/
+```
+
+安装后在 ZCode 的 `Settings → Skills` 中点击 `Refresh` 并确认技能已启用；在对话中使用 `$lx-ai-learning-coach` 等名称调用。
+
+### 腾讯 WorkBuddy
+
+WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把四个技能分别打包：
+
+```bash
+mkdir -p workbuddy-packages
+for d in skills/lx-*; do
+  name=$(basename "$d")
+  (cd "$d" && zip -r "../../workbuddy-packages/${name}.zip" .)
+done
+```
+
+然后进入 WorkBuddy 的“添加技能 → 上传技能”，选择 `workbuddy-packages/` 中需要的 ZIP 文件。导入第三方技能前应先检查其中的说明、脚本和权限请求。
 
 ## 安装到 Codex
 
