@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: c7f4df2f992d2eb6bd2a3d10f5ee5603ecef7f1caa68667f71ca81186874a3dc -->
+<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | 日本語 | [한국어](README.ko.md)
 
@@ -46,11 +46,45 @@ $lx-institutional-social-coach を使い、上司への進捗報告を準備し�
 ## ダウンロード
 
 ```bash
-git clone https://github.com/lxqq66/lx-skill.git
+git clone https://github.com/lixianglaoshi/lx-skill.git
 cd lx-skill
 ```
 
 公開リポジトリは誰でも閲覧・ダウンロードできます。書き込み権限がない人は元のリポジトリを直接変更できません。fork や Pull Request は、所有者が採用しない限り元の内容を変更しません。
+
+## 中国系 Agent へのインストール
+
+### Kimi Code
+
+```bash
+mkdir -p ~/.kimi-code/skills
+cp -R skills/lx-* ~/.kimi-code/skills/
+```
+
+Kimi Code は `~/.agents/skills/` も読み込みます。新しいセッションを開始し、`/skill:lx-ai-learning-coach` のように明示的に呼び出すか、自動選択を利用します。
+
+### ZCode
+
+```bash
+mkdir -p ~/.zcode/skills
+cp -R skills/lx-* ~/.zcode/skills/
+```
+
+`Settings → Skills` で `Refresh` をクリックし、有効になっていることを確認してから `$lx-ai-learning-coach` などで呼び出します。
+
+### Tencent WorkBuddy
+
+WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。4つの Skill を個別にパッケージ化します。
+
+```bash
+mkdir -p workbuddy-packages
+for d in skills/lx-*; do
+  name=$(basename "$d")
+  (cd "$d" && zip -r "../../workbuddy-packages/${name}.zip" .)
+done
+```
+
+WorkBuddy で `Add Skill → Upload Skill` を選び、`workbuddy-packages/` 内の必要な ZIP をアップロードします。第三者の Skill を読み込む前に、指示、スクリプト、権限要求を確認してください。
 
 ## Codex へのインストール
 
