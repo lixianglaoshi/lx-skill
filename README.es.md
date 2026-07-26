@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: c7f4df2f992d2eb6bd2a3d10f5ee5603ecef7f1caa68667f71ca81186874a3dc -->
+<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -46,11 +46,45 @@ Separa hechos, interpretaciones, riesgos formales y acciones controlables, y red
 ## Descarga
 
 ```bash
-git clone https://github.com/lxqq66/lx-skill.git
+git clone https://github.com/lixianglaoshi/lx-skill.git
 cd lx-skill
 ```
 
 Cualquier persona puede consultar y descargar este repositorio público. Nadie puede cambiar el repositorio original sin permiso de escritura; los forks y Pull Requests no modifican el original a menos que el propietario los acepte.
+
+## Instalación en agentes de China
+
+### Kimi Code
+
+```bash
+mkdir -p ~/.kimi-code/skills
+cp -R skills/lx-* ~/.kimi-code/skills/
+```
+
+Kimi Code también examina `~/.agents/skills/`. Inicia una sesión nueva e invoca un skill con `/skill:lx-ai-learning-coach`, o permite que el agente lo seleccione automáticamente.
+
+### ZCode
+
+```bash
+mkdir -p ~/.zcode/skills
+cp -R skills/lx-* ~/.zcode/skills/
+```
+
+Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén habilitados e invócalos con nombres como `$lx-ai-learning-coach`.
+
+### Tencent WorkBuddy
+
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los cuatro skills por separado:
+
+```bash
+mkdir -p workbuddy-packages
+for d in skills/lx-*; do
+  name=$(basename "$d")
+  (cd "$d" && zip -r "../../workbuddy-packages/${name}.zip" .)
+done
+```
+
+En WorkBuddy, selecciona `Add Skill → Upload Skill` y carga los ZIP necesarios desde `workbuddy-packages/`. Revisa las instrucciones, scripts y permisos de cualquier skill de terceros antes de importarlo.
 
 ## Instalación en Codex
 
