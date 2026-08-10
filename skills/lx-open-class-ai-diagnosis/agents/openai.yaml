@@ -1,0 +1,4 @@
+interface:
+  display_name: "李翔公开课AI教学诊断"
+  short_description: "诊断公开课中AI是否真正促进学生学习并提供可落实改进"
+  default_prompt: "使用 $lx-open-class-ai-diagnosis 诊断我的公开课 AI 教学价值；先阅读我上传的教案、PPT或反思，再补问必要信息。"
