@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
+<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | Deutsch | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -14,6 +14,7 @@
 | `lx-parent-learning-environment` | Hausaufgabenroutinen, Ermahnen, Vergleiche, Bildschirmkonflikte, unklare Aufgaben und unpassende Schwierigkeit |
 | `lx-ai-learning-coach` | Zielklärung, jeweils eine Leitfrage, abgestufte Hinweise, Übung, Erklären in eigenen Worten und projektbasiertes Lernen |
 | `lx-institutional-social-coach` | Kommunikation nach oben, Grenzen im Kollegium, informelle Termine, Büropolitik und soziale Anspannung in hierarchischen Organisationen |
+| `lx-open-class-ai-diagnosis` | Diagnostik des didaktischen KI-Werts, der Belege, Risiken und konkreten Verbesserungen einer offenen Unterrichtsstunde |
 
 Die Skills antworten in der Sprache der Nutzerinnen und Nutzer. Die eigentliche Logik bleibt in einer gemeinsamen Version, damit Übersetzungen nicht auseinanderlaufen.
 
@@ -41,6 +42,10 @@ Stelle jeweils nur eine zentrale Frage und verrate die Endlösung nicht sofort.
 ```text
 Nutze $lx-institutional-social-coach, um ein Statusgespräch mit meiner Führungskraft vorzubereiten.
 Trenne Fakten, Deutungen, formale Risiken und kontrollierbare Schritte und formuliere ein Gesprächsskript.
+```
+
+```text
+Nutze $lx-open-class-ai-diagnosis zur Analyse meiner offenen Unterrichtsstunde. Lies zuerst Unterrichtsplan und Folien und prüfe, ob KI das Lernen verändert oder nur ein Werkzeug zeigt.
 ```
 
 ## Herunterladen
@@ -74,7 +79,7 @@ Unter `Settings → Skills` auf `Refresh` klicken, die Aktivierung prüfen und d
 
 ### Tencent WorkBuddy
 
-WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die vier Skills einzeln paketieren:
+WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die fünf Skills einzeln paketieren:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -100,6 +105,7 @@ $lx-education-diagnosis
 $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
+$lx-open-class-ai-diagnosis
 ```
 
 ## Installation für Claude Code
@@ -116,6 +122,7 @@ Für ein einzelnes Projekt werden die Ordner nach `.claude/skills/` kopiert. Exp
 /lx-parent-learning-environment
 /lx-ai-learning-coach
 /lx-institutional-social-coach
+/lx-open-class-ai-diagnosis
 ```
 
 ## Übersetzungen synchron halten
@@ -127,7 +134,7 @@ python3 scripts/check_i18n_sync.py --update-markers
 python3 scripts/check_i18n_sync.py
 ```
 
-Eine GitHub Action führt dieselbe Prüfung für relevante Änderungen aus. Einzelheiten stehen in [docs/i18n-maintenance.md](docs/i18n-maintenance.md).
+Die Prüfung wird nur noch manuell lokal ausgeführt. Die GitHub Action ist deaktiviert, daher erzeugt die Übersetzungssynchronisierung keine GitHub-Benachrichtigungen mehr. Einzelheiten stehen in [docs/i18n-maintenance.md](docs/i18n-maintenance.md).
 
 ## Struktur und Sicherheit
 
