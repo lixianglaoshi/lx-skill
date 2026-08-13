@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
+<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -14,6 +14,7 @@
 | `lx-parent-learning-environment` | Homework prompting, comparisons, screen conflict, unclear tasks, difficulty mismatch, feedback, and household rules |
 | `lx-ai-learning-coach` | Goal clarification, one-question-at-a-time tutoring, graduated hints, practice, teach-back, and project learning |
 | `lx-institutional-social-coach` | Managing up, workplace boundaries, informal gatherings, office politics, and social anxiety in hierarchical organizations |
+| `lx-open-class-ai-diagnosis` | Diagnose the teaching value, evidence, risks, and actionable revisions of AI in an open class from plans, slides, reflections, and classroom evidence |
 
 All skills follow the user's language and support both English and Simplified Chinese.
 
@@ -57,7 +58,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the four skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the five skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -83,6 +84,7 @@ $lx-education-diagnosis
 $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
+$lx-open-class-ai-diagnosis
 ```
 
 ## Install for Claude Code
@@ -99,6 +101,7 @@ For a single project, copy them to `.claude/skills/`. Invoke them explicitly wit
 /lx-parent-learning-environment
 /lx-ai-learning-coach
 /lx-institutional-social-coach
+/lx-open-class-ai-diagnosis
 ```
 
 ## Keeping translations in sync
@@ -110,7 +113,7 @@ python3 scripts/check_i18n_sync.py --update-markers
 python3 scripts/check_i18n_sync.py
 ```
 
-The first command records the current source fingerprint in all six README files. The second verifies the fingerprint, language navigation, skill names, and installation entry point. A GitHub Action runs the same check on relevant pushes and Pull Requests. See [docs/i18n-maintenance.md](docs/i18n-maintenance.md) for the workflow.
+The first command records the current source fingerprint in all six README files. The second verifies the fingerprint, language navigation, skill names, and installation entry point. This is now a manual local check; the GitHub Action has been disabled, so translation synchronization no longer generates GitHub alerts. See [docs/i18n-maintenance.md](docs/i18n-maintenance.md) for the workflow.
 
 ## Examples
 
@@ -124,6 +127,10 @@ Use $lx-ai-learning-coach to teach me SQL through guided practice. Ask one core 
 
 ```text
 Use $lx-institutional-social-coach to prepare a progress update for my manager. Separate facts, interpretations, formal risks, and controllable actions, then draft a script.
+```
+
+```text
+Use $lx-open-class-ai-diagnosis to review my open class. Read my lesson plan and slides first, then tell me whether AI changes student learning or merely displays a tool.
 ```
 
 ## Repository structure
