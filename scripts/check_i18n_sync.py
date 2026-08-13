@@ -24,6 +24,8 @@ SKILL_IDS = (
     "lx-parent-learning-environment",
     "lx-ai-learning-coach",
     "lx-institutional-social-coach",
+    "lx-open-class-ai-diagnosis",
+    "lx-gamified-learning-design",
 )
 MARKER_PATTERN = re.compile(
     r"<!-- i18n-source-sha256: (?P<hash>[0-9a-f]{64}|PLACEHOLDER) -->"
