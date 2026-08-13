@@ -1,0 +1,6 @@
+interface:
+  display_name: "李翔学习游戏化设计"
+  short_description: "把课程目标变成可操作的学习游戏机制"
+  default_prompt: "使用 $lx-gamified-learning-design 设计一个真正服务学习的游戏：先问我年级、学科、目标和学生困难，再把算理、算法或概念关系做成可视化的递进机制。"
+policy:
+  allow_implicit_invocation: true
