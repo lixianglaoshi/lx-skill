@@ -8,11 +8,12 @@
 - `lx-parent-learning-environment`：家庭催促、比较、设备、任务、反馈与难度诊断。
 - `lx-ai-learning-coach`：通过目标澄清、一次一问、分级提示、练习、复述和项目循序学习。
 - `lx-institutional-social-coach`：体制内及层级组织的向上沟通、边界、非正式社交和焦虑调节。
+- `lx-open-class-ai-diagnosis`：公开课、赛课和展示课的AI教学价值诊断；区分AI痕迹与学生学习价值，给出局部修改与风险预案。
+- `lx-gamified-learning-design`：把热门游戏机制抽象为学习机制，将算理、算法、空间关系、因果关系和策略转成可操作、可视化、可迁移的教学游戏；默认适配乡村小学有限设备，并在确认后生成开发提示词。
 
 ## 下一阶段候选
 
-- `lx-gamified-learning-design`：游戏化教学系统、任务、反馈、段位与奖励设计。
-- `lx-open-class-diagnosis`：公开课目标、学习活动、互动、节奏和评价诊断。
+- `lx-open-class-optimization`：基于真实优秀课例、教案、PPT和课堂证据，完整优化公开课的活动链、课件、话术、练习与说课答辩。
 - `lx-homeroom-teacher-assistant`：班主任日常观察、个案分析、家校沟通和班级运行助手。
 - `lx-teacher-ai-learning-design`：把静态课程改造成真实任务、AI陪练和即时反馈体验。
 - `lx-student-project-learning`：从学生真实兴趣出发设计项目式学习路径。
