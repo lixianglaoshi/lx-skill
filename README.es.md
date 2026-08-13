@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
+<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -15,6 +15,7 @@
 | `lx-ai-learning-coach` | Aprendizaje guiado con aclaración de objetivos, una pregunta por turno, pistas graduales, práctica y explicación del alumno |
 | `lx-institutional-social-coach` | Comunicación ascendente, límites laborales, política de oficina y ansiedad social en instituciones u organizaciones jerárquicas |
 | `lx-open-class-ai-diagnosis` | Diagnóstico del valor pedagógico, las evidencias, los riesgos y las mejoras concretas de la IA en una clase abierta |
+| `lx-gamified-learning-design` | Convierte mecánicas de juego en mecanismos de aprendizaje para hacer visibles y manipulables conceptos, algoritmos, relaciones espaciales y estrategias |
 
 Los skills siguen el idioma del usuario. La lógica se mantiene en una sola versión para evitar diferencias entre traducciones.
 
@@ -79,7 +80,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los cinco skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los seis skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -106,6 +107,7 @@ $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
 ```
 
 ## Instalación en Claude Code
@@ -123,6 +125,7 @@ Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación e
 /lx-ai-learning-coach
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
 ```
 
 ## Sincronización de traducciones
