@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
+<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | 日本語 | [한국어](README.ko.md)
 
@@ -14,6 +14,7 @@
 | `lx-parent-learning-environment` | 宿題の催促、比較、端末利用の衝突、曖昧な課題、難易度の不一致、家庭内ルール |
 | `lx-ai-learning-coach` | 目標の明確化、一度に一つの問い、段階的なヒント、練習、教え返し、プロジェクト学習 |
 | `lx-institutional-social-coach` | 上司への報告、同僚との境界線、非公式な会合、職場政治、階層型組織での対人不安 |
+| `lx-open-class-ai-diagnosis` | 公開授業におけるAIの教育的価値、根拠、リスク、具体的な改善を診断 |
 
 各 skill は利用者の言語に合わせて回答します。翻訳ごとの差異を防ぐため、skill のロジック自体は一つの版で管理します。
 
@@ -41,6 +42,10 @@ $lx-ai-learning-coach を使い、練習を通してSQLを教えてください�
 ```text
 $lx-institutional-social-coach を使い、上司への進捗報告を準備してください。
 事実、解釈、正式なリスク、自分でコントロールできる行動を分け、話し方の例を作ってください。
+```
+
+```text
+$lx-open-class-ai-diagnosis を使い、私の公開授業を診断してください。まず指導案とスライドを読み、AIが生徒の学びを変えているのか、単なるツール展示なのかを確認してください。
 ```
 
 ## ダウンロード
@@ -74,7 +79,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。4つの Skill を個別にパッケージ化します。
+WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。5つの Skill を個別にパッケージ化します。
 
 ```bash
 mkdir -p workbuddy-packages
@@ -100,6 +105,7 @@ $lx-education-diagnosis
 $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
+$lx-open-class-ai-diagnosis
 ```
 
 ## Claude Code へのインストール
@@ -116,6 +122,7 @@ cp -R skills/lx-* ~/.claude/skills/
 /lx-parent-learning-environment
 /lx-ai-learning-coach
 /lx-institutional-social-coach
+/lx-open-class-ai-diagnosis
 ```
 
 ## 翻訳の同期
@@ -127,7 +134,7 @@ python3 scripts/check_i18n_sync.py --update-markers
 python3 scripts/check_i18n_sync.py
 ```
 
-関連する変更では GitHub Action も同じ検査を実行します。手順は [docs/i18n-maintenance.md](docs/i18n-maintenance.md) を参照してください。
+検査はローカルで手動実行するだけです。GitHub Action は無効化されているため、翻訳同期による GitHub 通知は発生しません。手順は [docs/i18n-maintenance.md](docs/i18n-maintenance.md) を参照してください。
 
 ## 構成と安全上の注意
 
