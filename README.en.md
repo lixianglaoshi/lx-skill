@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
+<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -15,6 +15,7 @@
 | `lx-ai-learning-coach` | Goal clarification, one-question-at-a-time tutoring, graduated hints, practice, teach-back, and project learning |
 | `lx-institutional-social-coach` | Managing up, workplace boundaries, informal gatherings, office politics, and social anxiety in hierarchical organizations |
 | `lx-open-class-ai-diagnosis` | Diagnose the teaching value, evidence, risks, and actionable revisions of AI in an open class from plans, slides, reflections, and classroom evidence |
+| `lx-gamified-learning-design` | Turn game mechanics into learning mechanics so abstract concepts, algorithms, spatial relations, causality, and strategies become operable, visible, and transferable |
 
 All skills follow the user's language and support both English and Simplified Chinese.
 
@@ -58,7 +59,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the five skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the six skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -85,6 +86,7 @@ $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
 ```
 
 ## Install for Claude Code
@@ -102,6 +104,7 @@ For a single project, copy them to `.claude/skills/`. Invoke them explicitly wit
 /lx-ai-learning-coach
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
 ```
 
 ## Keeping translations in sync
@@ -131,6 +134,11 @@ Use $lx-institutional-social-coach to prepare a progress update for my manager. 
 
 ```text
 Use $lx-open-class-ai-diagnosis to review my open class. Read my lesson plan and slides first, then tell me whether AI changes student learning or merely displays a tool.
+```
+
+```text
+Use $lx-gamified-learning-design to design a learning game for spatial views.
+Ask about grade, learning difficulty, and available devices first; make students build, predict, verify, and explain rather than merely answer a quiz.
 ```
 
 ## Repository structure
