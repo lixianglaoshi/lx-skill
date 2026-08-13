@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
+<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | 한국어
 
@@ -14,6 +14,7 @@
 | `lx-parent-learning-environment` | 숙제 재촉, 비교, 디지털 기기 갈등, 모호한 과제, 난이도 불일치와 가정 규칙 |
 | `lx-ai-learning-coach` | 목표 확인, 한 번에 하나의 질문, 단계별 힌트, 연습, 설명하기와 프로젝트 학습 |
 | `lx-institutional-social-coach` | 상사 보고, 동료와의 경계, 비공식 모임, 사내 정치와 위계적 조직에서의 사회적 불안 |
+| `lx-open-class-ai-diagnosis` | 공개수업에서 AI의 교육적 가치, 근거, 위험과 구체적 개선안을 진단 |
 
 각 skill은 사용자의 언어에 맞춰 답변합니다. 번역본 사이의 불일치를 막기 위해 실제 skill 로직은 하나의 버전으로 유지합니다.
 
@@ -41,6 +42,10 @@ $lx-ai-learning-coach를 사용해 연습 중심으로 SQL을 가르쳐 주세�
 ```text
 $lx-institutional-social-coach를 사용해 상사에게 진행 상황을 보고할 준비를 해 주세요.
 사실, 해석, 공식적 위험과 통제 가능한 행동을 구분하고 실제로 말할 문장을 작성해 주세요.
+```
+
+```text
+$lx-open-class-ai-diagnosis를 사용해 제 공개수업을 진단해 주세요. 먼저 수업안과 슬라이드를 읽고 AI가 학생 학습을 바꾸는지, 단순히 도구를 보여 주는지 판단해 주세요.
 ```
 
 ## 다운로드
@@ -74,7 +79,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 네 개의 Skill을 각각 패키지로 만듭니다.
+WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 다섯 개의 Skill을 각각 패키지로 만듭니다.
 
 ```bash
 mkdir -p workbuddy-packages
@@ -100,6 +105,7 @@ $lx-education-diagnosis
 $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
+$lx-open-class-ai-diagnosis
 ```
 
 ## Claude Code에 설치
@@ -116,6 +122,7 @@ cp -R skills/lx-* ~/.claude/skills/
 /lx-parent-learning-environment
 /lx-ai-learning-coach
 /lx-institutional-social-coach
+/lx-open-class-ai-diagnosis
 ```
 
 ## 번역 동기화
@@ -127,7 +134,7 @@ python3 scripts/check_i18n_sync.py --update-markers
 python3 scripts/check_i18n_sync.py
 ```
 
-관련 변경이 있을 때 GitHub Action도 같은 검사를 실행합니다. 자세한 절차는 [docs/i18n-maintenance.md](docs/i18n-maintenance.md)를 참고하세요.
+검사는 로컬에서 수동으로만 실행합니다. GitHub Action은 비활성화되었으므로 번역 동기화로 GitHub 알림이 발생하지 않습니다. 자세한 절차는 [docs/i18n-maintenance.md](docs/i18n-maintenance.md)를 참고하세요.
 
 ## 구조와 안전
 
