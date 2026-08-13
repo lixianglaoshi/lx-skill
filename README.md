@@ -1,12 +1,12 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
+<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
 
 简体中文 | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
 `lx-skill` 是一个持续生长的 AI 教育、新时代教育、数字教育与个人成长 Agent Skills 技能包，由李翔老师的乡村教育一线实践、AI赋能教学经验和组织沟通思考提炼而成。它可用于腾讯 WorkBuddy、Kimi Code、ZCode，也兼容 Codex、Claude Code 及其他支持开放 Agent Skills 规范的智能体。
 
-当前包含五个可独立安装的技能：
+当前包含六个可独立安装的技能：
 
 | Skill | 适用场景 |
 | --- | --- |
@@ -15,6 +15,7 @@
 | `lx-ai-learning-coach` | 用户说想学什么后，澄清目标与基础，通过一次一个问题、分级提示、练习和复述循序学习 |
 | `lx-institutional-social-coach` | 体制内和层级组织的向上汇报、同事边界、饭局应酬、办公室政治与社交焦虑 |
 | `lx-open-class-ai-diagnosis` | 读取教案、PPT、反思和课堂证据，诊断公开课中AI的教学价值、展示证据、风险与可落实修改 |
+| `lx-gamified-learning-design` | 把游戏机制转译为学习机制，让算理、算法、空间关系、因果关系和策略变成可操作、可视化、可迁移的学习过程 |
 
 所有技能会跟随用户语言回答，支持简体中文和 English。
 
@@ -52,6 +53,11 @@
 ```text
 使用 $lx-open-class-ai-diagnosis 诊断我的公开课。
 先阅读我的教案和PPT，告诉我AI是在促进学生学习还是只是在展示工具；再补问必要的评委、学生和设备条件。
+```
+
+```text
+使用 $lx-gamified-learning-design 设计“观察物体（二）”的学习游戏。
+先问清年级、学情和设备，再把空间视角变成搭建、投影、预测、验证和纸笔表达；不要先做成答题换皮。
 ```
 
 也可以直接用 English 提问，例如：
@@ -93,7 +99,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### 腾讯 WorkBuddy
 
-WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把五个技能分别打包：
+WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把六个技能分别打包：
 
 ```bash
 mkdir -p workbuddy-packages
@@ -129,6 +135,7 @@ $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
 ```
 
 也可以直接描述问题，由 Codex 根据各 skill 的 `description` 自动选择。若安装后没有出现，重启 Codex。
@@ -157,6 +164,7 @@ cp -R skills/lx-* .claude/skills/
 /lx-ai-learning-coach
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
 ```
 
 ## Windows PowerShell
@@ -217,7 +225,8 @@ lx-skill/
     ├── lx-parent-learning-environment/
     ├── lx-ai-learning-coach/
     ├── lx-institutional-social-coach/
-    └── lx-open-class-ai-diagnosis/
+    ├── lx-open-class-ai-diagnosis/
+    └── lx-gamified-learning-design/
 ```
 
 每个 skill 文件夹都包含标准 `SKILL.md`、Codex 可选界面元数据 `agents/openai.yaml` 和按需加载的 `references/`。规范见 [Agent Skills specification](https://agentskills.io/specification)。平台安装方式参考 [OpenAI Codex Skills 文档](https://developers.openai.com/codex/skills) 与 [Claude Code Skills 文档](https://code.claude.com/docs/en/skills)。
@@ -232,4 +241,4 @@ lx-skill/
 
 ## 后续计划
 
-`lx-skill` 将继续增加游戏化教学、公开课优化、班主任助手、教师AI学习设计等技能。详见 [ROADMAP.md](ROADMAP.md)。
+`lx-skill` 将继续增加公开课优化、班主任助手、教师AI学习设计等技能。游戏化学习设计已加入首版，后续会根据更多课堂案例持续迭代。详见 [ROADMAP.md](ROADMAP.md)。
