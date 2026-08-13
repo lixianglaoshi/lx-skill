@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 1f45c38fb2ae85e00ba6a70c16878533bc13268948db40ff4e6a2ea3aca1615c -->
+<!-- i18n-source-sha256: 5e23856151062a9bebdc3905a1667b9b52bae3825a5a9d9bcf9bdb5128dd524d -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -14,6 +14,7 @@
 | `lx-parent-learning-environment` | Rutinas de deberes, presión familiar, comparaciones, pantallas, tareas poco claras y dificultad inadecuada |
 | `lx-ai-learning-coach` | Aprendizaje guiado con aclaración de objetivos, una pregunta por turno, pistas graduales, práctica y explicación del alumno |
 | `lx-institutional-social-coach` | Comunicación ascendente, límites laborales, política de oficina y ansiedad social en instituciones u organizaciones jerárquicas |
+| `lx-open-class-ai-diagnosis` | Diagnóstico del valor pedagógico, las evidencias, los riesgos y las mejoras concretas de la IA en una clase abierta |
 
 Los skills siguen el idioma del usuario. La lógica se mantiene en una sola versión para evitar diferencias entre traducciones.
 
@@ -41,6 +42,10 @@ Haz una sola pregunta central cada vez y no reveles inmediatamente la respuesta 
 ```text
 Usa $lx-institutional-social-coach para preparar una actualización para mi responsable.
 Separa hechos, interpretaciones, riesgos formales y acciones controlables, y redacta un guion.
+```
+
+```text
+Usa $lx-open-class-ai-diagnosis para revisar mi clase abierta. Lee primero mi plan y mis diapositivas y dime si la IA transforma el aprendizaje del alumnado o solo exhibe una herramienta.
 ```
 
 ## Descarga
@@ -74,7 +79,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los cuatro skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los cinco skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -100,6 +105,7 @@ $lx-education-diagnosis
 $lx-parent-learning-environment
 $lx-ai-learning-coach
 $lx-institutional-social-coach
+$lx-open-class-ai-diagnosis
 ```
 
 ## Instalación en Claude Code
@@ -116,6 +122,7 @@ Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación e
 /lx-parent-learning-environment
 /lx-ai-learning-coach
 /lx-institutional-social-coach
+/lx-open-class-ai-diagnosis
 ```
 
 ## Sincronización de traducciones
@@ -127,7 +134,7 @@ python3 scripts/check_i18n_sync.py --update-markers
 python3 scripts/check_i18n_sync.py
 ```
 
-La acción de GitHub ejecuta la misma comprobación en los cambios relevantes. Consulta [docs/i18n-maintenance.md](docs/i18n-maintenance.md).
+La comprobación se ejecuta solo de forma manual en local. La acción de GitHub está desactivada, por lo que la sincronización de traducciones ya no genera alertas de GitHub. Consulta [docs/i18n-maintenance.md](docs/i18n-maintenance.md).
 
 ## Estructura y seguridad
 
