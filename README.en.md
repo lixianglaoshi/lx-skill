@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
+<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -15,7 +15,8 @@
 | `lx-ai-learning-coach` | Goal clarification, one-question-at-a-time tutoring, graduated hints, practice, teach-back, and project learning |
 | `lx-open-class-ai-diagnosis` | Diagnose the teaching value, evidence, risks, and actionable revisions of AI in an open class from plans, slides, reflections, and classroom evidence |
 | `lx-gamified-learning-design` | Turn game mechanics into learning mechanics so abstract concepts, algorithms, spatial relations, causality, and strategies become operable, visible, and transferable |
-| `lx-subject-visualization` | Turn a topic or problem into an interactive single-file teaching page, including general visualization, solid geometry, conic sections, and microscopic chemistry reactions |
+| `lx-interactive-teaching-generator` | Directly deliver a polished, openable, single-file interactive HTML page for any teaching topic, using genuine Three.js 3D, SVG/D3, KaTeX, sliders, and a collapsible check when appropriate |
+| `lx-highschool-geometry-chemistry` | Use SymPy-backed exact computation to deliver a single-file interactive page for high-school solid geometry, analytic geometry/conic sections, and chemistry reactions |
 | `lx-3d-teaching-animation` | Create a pausable, explorable 3D teaching page for spatial structure, mechanical transmission, forces, motion, and other processes students need to inspect |
 
 All skills follow the user's language and support both English and Simplified Chinese.
@@ -60,7 +61,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the seven skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the eight skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -81,6 +82,16 @@ cp -R skills/lx-* ~/.agents/skills/
 
 For a single project, copy them to `.agents/skills/`. Invoke them explicitly with:
 
+```text
+$lx-education-diagnosis
+$lx-parent-learning-environment
+$lx-ai-learning-coach
+$lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
+$lx-interactive-teaching-generator
+$lx-highschool-geometry-chemistry
+$lx-3d-teaching-animation
+```
 
 ## Install for Claude Code
 
@@ -91,6 +102,16 @@ cp -R skills/lx-* ~/.claude/skills/
 
 For a single project, copy them to `.claude/skills/`. Invoke them explicitly with:
 
+```text
+/lx-education-diagnosis
+/lx-parent-learning-environment
+/lx-ai-learning-coach
+/lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
+/lx-interactive-teaching-generator
+/lx-highschool-geometry-chemistry
+/lx-3d-teaching-animation
+```
 
 ## Keeping translations in sync
 
@@ -113,6 +134,9 @@ Use $lx-education-diagnosis in education decision and event review mode. I yelle
 Use $lx-ai-learning-coach to teach me SQL through guided practice. Ask one core question at a time and do not reveal the final answer immediately.
 ```
 
+```text
+Use $lx-interactive-teaching-generator to make an interactive webpage for linear functions. Let students change slope and intercept, synchronize graph, equation, and real-world meaning, and directly deliver one openable HTML file rather than links or a prompt.
+```
 
 ```text
 Use $lx-open-class-ai-diagnosis to review my open class. Read my lesson plan and slides first, then tell me whether AI changes student learning or merely displays a tool.
@@ -124,8 +148,7 @@ Ask about grade, learning difficulty, and available devices first; make students
 ```
 
 ```text
-Use $lx-subject-visualization to make an interactive page for linear functions.
-When students change slope and intercept, synchronize the graph, equation, and real-world meaning; include prediction and verification, not a quiz skin.
+Use $lx-highschool-geometry-chemistry to solve an ellipse focal-chord range problem. Use exact computation so the result, derivation, draggable line, and graph agree, then deliver one openable HTML file.
 ```
 
 ```text
