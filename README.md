@@ -1,12 +1,12 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
+<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
 
 简体中文 | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
 `lx-skill` 是一个持续生长的 AI 教育、新时代教育、数字教育与个人成长 Agent Skills 技能包，由李翔老师的乡村教育一线实践、AI赋能教学经验和组织沟通思考提炼而成。它可用于腾讯 WorkBuddy、Kimi Code、ZCode，也兼容 Codex、Claude Code 及其他支持开放 Agent Skills 规范的智能体。
 
-当前包含七个可独立安装的技能：
+当前包含八个可独立安装的技能：
 
 | Skill | 适用场景 |
 | --- | --- |
@@ -15,20 +15,22 @@
 | `lx-ai-learning-coach` | 用户说想学什么后，澄清目标与基础，通过一次一个问题、分级提示、练习和复述循序学习 |
 | `lx-open-class-ai-diagnosis` | 读取教案、PPT、反思和课堂证据，诊断公开课中AI的教学价值、展示证据、风险与可落实修改 |
 | `lx-gamified-learning-design` | 把游戏机制转译为学习机制，让算理、算法、空间关系、因果关系和策略变成可操作、可视化、可迁移的学习过程 |
-| `lx-subject-visualization` | 把抽象学科主题或题目做成可直接打开的交互教学网页；覆盖通用可视化、高中立体几何、圆锥曲线和化学反应微观演示 |
+| `lx-interactive-teaching-generator`（互动教学生成器） | 为任意教学主题直接交付高质感、可打开的单文件互动 HTML 网页；按主题使用真实 Three.js 3D、SVG/D3、KaTeX、滑块与可折叠检验 |
+| `lx-highschool-geometry-chemistry`（lx 高中几何 + 化学反应） | 用 SymPy 精确计算交付高中立体几何、解析几何/圆锥曲线和化学反应的单文件互动题解或微观演示网页 |
 | `lx-3d-teaching-animation` | 把空间结构、机械传动、力与运动等做成可暂停、旋转、拆解、预测和解释的 3D 教学演示网页 |
 
 所有技能会跟随用户语言回答，支持简体中文和 English。
 
-## 三个容易混淆的 Skill，怎样自动选择
+## 四个容易混淆的 Skill，怎样自动选择
 
 | 你想得到的结果 | 优先调用 | 典型说法 |
 | --- | --- | --- |
 | 一节游戏化课的任务、关卡、角色、反馈和迁移 | `lx-gamified-learning-design` | “把观察物体做成建造闯关游戏” |
-| 某个学科关系或一道题的互动网页，并保证公式、图形和答案一致 | `lx-subject-visualization` | “做一个可拖动斜率的一次函数网页”“解一道圆锥曲线题” |
+| 任意主题直接生成一个高质感、可操作的互动网页 | `lx-interactive-teaching-generator` | “做一个能拖动斜率的函数网页”“把行星运动做成可操作 3D 页面” |
+| 高中立体几何、圆锥曲线或化学反应，且题解必须精确一致 | `lx-highschool-geometry-chemistry` | “解一道椭圆题并生成可拖动参数的网页”“做甲烷燃烧的原子重组” |
 | 必须旋转、暂停、拆解、剖切或按时间观察的空间/运动过程 | `lx-3d-teaching-animation` | “为什么齿轮转向相反”“展示滑轮组受力” |
 
-发生重叠时：游戏需求先由 `lx-gamified-learning-design` 设计机制；“能旋转的立体几何**解题**网页”优先 `lx-subject-visualization` 保证精确，再由 3D Skill 补演示；纯传动、结构、运动和空间过程优先 `lx-3d-teaching-animation`。
+发生重叠时：游戏需求先由 `lx-gamified-learning-design` 设计机制；高中题的精确解题优先 `lx-highschool-geometry-chemistry`；“任意主题直接做炫酷互动单页”优先 `lx-interactive-teaching-generator`；纯传动、结构、运动和空间过程的课堂分步演示优先 `lx-3d-teaching-animation`。
 
 ## 设计理念
 
@@ -56,6 +58,10 @@
 先弄清我的目标和基础，一次只问一个问题，别马上告诉我最终答案。
 ```
 
+```text
+使用 $lx-interactive-teaching-generator 做一个“初中一次函数”的互动教学网页。
+学生拖动斜率和截距时，要同步看见图像、解析式和真实情境；直接交付一个能打开的 HTML 文件，不要只给网址或提示词。
+```
 
 ```text
 使用 $lx-open-class-ai-diagnosis 诊断我的公开课。
@@ -68,8 +74,8 @@
 ```
 
 ```text
-使用 $lx-subject-visualization 把初中一次函数做成单文件互动网页。
-学生拖动斜率和截距时，要同时看见图像、解析式、增减变化和真实情境的对应；先给教学设计，再生成网页。
+使用 $lx-highschool-geometry-chemistry 解一道椭圆的焦点弦范围题。
+用精确计算让答案、推导、动直线滑块和图形一致，并直接交付一个可打开的单文件 HTML。
 ```
 
 ```text
@@ -116,7 +122,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### 腾讯 WorkBuddy
 
-WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把七个技能分别打包：
+WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把八个技能分别打包：
 
 ```bash
 mkdir -p workbuddy-packages
@@ -146,6 +152,16 @@ cp -R skills/lx-* .agents/skills/
 
 显式调用方式：
 
+```text
+$lx-education-diagnosis
+$lx-parent-learning-environment
+$lx-ai-learning-coach
+$lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
+$lx-interactive-teaching-generator
+$lx-highschool-geometry-chemistry
+$lx-3d-teaching-animation
+```
 
 也可以直接描述问题，由 Codex 根据各 skill 的 `description` 自动选择。若安装后没有出现，重启 Codex。
 
@@ -167,6 +183,16 @@ cp -R skills/lx-* .claude/skills/
 
 显式调用方式：
 
+```text
+/lx-education-diagnosis
+/lx-parent-learning-environment
+/lx-ai-learning-coach
+/lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
+/lx-interactive-teaching-generator
+/lx-highschool-geometry-chemistry
+/lx-3d-teaching-animation
+```
 
 ## Windows PowerShell
 
@@ -210,10 +236,31 @@ python3 scripts/check_i18n_sync.py
 
 ## 仓库结构
 
+```text
+lx-skill/
+├── README.md
+├── README.en.md
+├── README.es.md
+├── README.de.md
+├── README.ja.md
+├── README.ko.md
+├── ROADMAP.md
+├── scripts/check_i18n_sync.py
+├── tests/evaluation-cases.md
+└── skills/
+    ├── lx-education-diagnosis/
+    ├── lx-parent-learning-environment/
+    ├── lx-ai-learning-coach/
+    ├── lx-open-class-ai-diagnosis/
+    ├── lx-gamified-learning-design/
+    ├── lx-interactive-teaching-generator/
+    ├── lx-highschool-geometry-chemistry/
+    └── lx-3d-teaching-animation/
+```
 
 每个 skill 文件夹都包含标准 `SKILL.md`、Codex 可选界面元数据 `agents/openai.yaml` 和按需加载的 `references/`。规范见 [Agent Skills specification](https://agentskills.io/specification)。平台安装方式参考 [OpenAI Codex Skills 文档](https://developers.openai.com/codex/skills) 与 [Claude Code Skills 文档](https://code.claude.com/docs/en/skills)。
 
-`lx-subject-visualization` 还包含按许可证保留的开源可视化组件与 NOTICE；分发该 Skill 时请保留其 `licenses/`、`vendor/` 和 `THIRD_PARTY_NOTICES.md`。
+`lx-interactive-teaching-generator` 按 MIT License 保留 AetherViz Master 的开源原始资源；`lx-highschool-geometry-chemistry` 按 Apache-2.0 保留 edulab 的精确计算与互动网页模块。分发这两个 Skill 时请保留其 `LICENSE`/`licenses/`、`vendor/` 和 `THIRD_PARTY_NOTICES.md`。
 
 `lx-3d-teaching-animation` 是独立编写的 3D 教学动画设计 Skill；它不分发未标注许可证的第三方 CAD 模型、网页查看器或源代码。
 
@@ -227,4 +274,4 @@ python3 scripts/check_i18n_sync.py
 
 ## 后续计划
 
-`lx-skill` 将继续增加公开课优化、班主任助手、教师AI学习设计等技能。游戏化学习设计、学科可视化和 3D 教学演示动画均已加入首版，后续会根据更多课堂案例持续迭代。详见 [ROADMAP.md](ROADMAP.md)。
+`lx-skill` 将继续增加公开课优化、班主任助手、教师AI学习设计等技能。游戏化学习设计、互动教学生成器、高中几何 + 化学反应和 3D 教学演示动画均已加入首版，后续会根据更多课堂案例持续迭代。详见 [ROADMAP.md](ROADMAP.md)。
