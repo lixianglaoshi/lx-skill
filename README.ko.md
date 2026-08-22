@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
+<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | 한국어
 
@@ -15,7 +15,8 @@
 | `lx-ai-learning-coach` | 목표 확인, 한 번에 하나의 질문, 단계별 힌트, 연습, 설명하기와 프로젝트 학습 |
 | `lx-open-class-ai-diagnosis` | 공개수업에서 AI의 교육적 가치, 근거, 위험과 구체적 개선안을 진단 |
 | `lx-gamified-learning-design` | 게임 메커니즘을 학습 메커니즘으로 바꾸어 개념, 알고리즘, 공간 관계, 인과 관계와 전략을 조작·시각화·전이하게 함 |
-| `lx-subject-visualization` | 학습 주제나 문제를 단일 파일의 상호작용 수업 페이지로 전환: 일반 시각화, 입체기하, 원뿔곡선, 화학 반응의 미시적 시연 포함 |
+| `lx-interactive-teaching-generator` | 어떤 수업 주제든 실제 Three.js 3D, SVG/D3, KaTeX, 슬라이더와 접을 수 있는 확인 활동을 활용해 고품질 단일 HTML 상호작용 수업 페이지를 직접 제공 |
+| `lx-highschool-geometry-chemistry` | SymPy 정밀 계산으로 고등학교 입체기하, 해석기하/원뿔곡선, 화학 반응을 위한 단일 HTML 상호작용 페이지를 제공 |
 | `lx-3d-teaching-animation` | 공간 구조, 기계 전달, 힘과 운동을 일시정지·탐색 가능한 3D 수업 페이지로 제작 |
 
 각 skill은 사용자의 언어에 맞춰 답변합니다. 번역본 사이의 불일치를 막기 위해 실제 skill 로직은 하나의 버전으로 유지합니다.
@@ -41,6 +42,9 @@ $lx-ai-learning-coach를 사용해 연습 중심으로 SQL을 가르쳐 주세�
 한 번에 핵심 질문 하나만 하고 최종 답을 바로 알려주지 마세요.
 ```
 
+```text
+$lx-interactive-teaching-generator를 사용해 일차함수 상호작용 페이지를 만들어 주세요. 기울기와 절편을 바꾸면 그래프·식·현실 맥락이 함께 변해야 하며, 링크나 프롬프트만 주지 말고 열 수 있는 HTML 파일을 직접 제공해 주세요.
+```
 
 ```text
 $lx-open-class-ai-diagnosis를 사용해 제 공개수업을 진단해 주세요. 먼저 수업안과 슬라이드를 읽고 AI가 학생 학습을 바꾸는지, 단순히 도구를 보여 주는지 판단해 주세요.
@@ -77,7 +81,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 일곱 개의 Skill을 각각 패키지로 만듭니다.
+WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 여덟 개의 Skill을 각각 패키지로 만듭니다.
 
 ```bash
 mkdir -p workbuddy-packages
@@ -98,6 +102,16 @@ cp -R skills/lx-* ~/.agents/skills/
 
 한 프로젝트에서만 사용할 경우 `.agents/skills/`에 복사합니다. 직접 호출하는 방법:
 
+```text
+$lx-education-diagnosis
+$lx-parent-learning-environment
+$lx-ai-learning-coach
+$lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
+$lx-interactive-teaching-generator
+$lx-highschool-geometry-chemistry
+$lx-3d-teaching-animation
+```
 
 ## Claude Code에 설치
 
@@ -108,6 +122,16 @@ cp -R skills/lx-* ~/.claude/skills/
 
 한 프로젝트에서만 사용할 경우 `.claude/skills/`에 복사합니다. 직접 호출하는 방법:
 
+```text
+/lx-education-diagnosis
+/lx-parent-learning-environment
+/lx-ai-learning-coach
+/lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
+/lx-interactive-teaching-generator
+/lx-highschool-geometry-chemistry
+/lx-3d-teaching-animation
+```
 
 ## 번역 동기화
 
