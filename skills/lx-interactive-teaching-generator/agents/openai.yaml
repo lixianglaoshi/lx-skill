@@ -1,0 +1,6 @@
+interface:
+  display_name: "互动教学生成器"
+  short_description: "为任意主题直接交付高质感单文件互动教学HTML网页"
+  default_prompt: "使用 $lx-interactive-teaching-generator 为我的教学主题直接生成一个可打开的单文件互动 HTML 网页。"
+policy:
+  allow_implicit_invocation: true
