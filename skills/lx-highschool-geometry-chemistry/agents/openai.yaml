@@ -1,0 +1,6 @@
+interface:
+  display_name: "lx 高中几何 + 化学反应"
+  short_description: "用精确计算交付高中几何圆锥曲线与化学反应互动HTML网页"
+  default_prompt: "使用 $lx-highschool-geometry-chemistry 把我的高中题目生成一个可直接打开的单文件 HTML 互动讲解网页。"
+policy:
+  allow_implicit_invocation: true
