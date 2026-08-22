@@ -7,7 +7,6 @@
 - `lx-education-diagnosis`：全局教育诊断，以及教育选择与具体事件复盘。
 - `lx-parent-learning-environment`：家庭催促、比较、设备、任务、反馈与难度诊断。
 - `lx-ai-learning-coach`：通过目标澄清、一次一问、分级提示、练习、复述和项目循序学习。
-- `lx-institutional-social-coach`：体制内及层级组织的向上沟通、边界、非正式社交和焦虑调节。
 - `lx-open-class-ai-diagnosis`：公开课、赛课和展示课的AI教学价值诊断；区分AI痕迹与学生学习价值，给出局部修改与风险预案。
 - `lx-gamified-learning-design`：把热门游戏机制抽象为学习机制，将算理、算法、空间关系、因果关系和策略转成可操作、可视化、可迁移的教学游戏；默认适配乡村小学有限设备，并在确认后生成开发提示词。
 - `lx-subject-visualization`：把抽象学科主题或具体题目生成单文件互动教学网页；整合通用互动可视化、高中立体几何、圆锥曲线与化学反应微观演示，并保留上游开源许可证与精确计算验证机制。
