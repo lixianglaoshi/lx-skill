@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
+<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -13,7 +13,6 @@
 | `lx-education-diagnosis` | Diagnóstico educativo global y revisión de decisiones o incidentes concretos de crianza y enseñanza |
 | `lx-parent-learning-environment` | Rutinas de deberes, presión familiar, comparaciones, pantallas, tareas poco claras y dificultad inadecuada |
 | `lx-ai-learning-coach` | Aprendizaje guiado con aclaración de objetivos, una pregunta por turno, pistas graduales, práctica y explicación del alumno |
-| `lx-institutional-social-coach` | Comunicación ascendente, límites laborales, política de oficina y ansiedad social en instituciones u organizaciones jerárquicas |
 | `lx-open-class-ai-diagnosis` | Diagnóstico del valor pedagógico, las evidencias, los riesgos y las mejoras concretas de la IA en una clase abierta |
 | `lx-gamified-learning-design` | Convierte mecánicas de juego en mecanismos de aprendizaje para hacer visibles y manipulables conceptos, algoritmos, relaciones espaciales y estrategias |
 | `lx-subject-visualization` | Convierte temas o problemas en una página didáctica interactiva de un solo archivo: visualización general, geometría espacial, secciones cónicas y reacciones químicas microscópicas |
@@ -42,10 +41,6 @@ Usa $lx-ai-learning-coach para enseñarme SQL mediante práctica guiada.
 Haz una sola pregunta central cada vez y no reveles inmediatamente la respuesta final.
 ```
 
-```text
-Usa $lx-institutional-social-coach para preparar una actualización para mi responsable.
-Separa hechos, interpretaciones, riesgos formales y acciones controlables, y redacta un guion.
-```
 
 ```text
 Usa $lx-open-class-ai-diagnosis para revisar mi clase abierta. Lee primero mi plan y mis diapositivas y dime si la IA transforma el aprendizaje del alumnado o solo exhibe una herramienta.
@@ -82,7 +77,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los ocho skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los siete skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -103,16 +98,6 @@ cp -R skills/lx-* ~/.agents/skills/
 
 Para un solo proyecto, copia los directorios en `.agents/skills/`. Invocación explícita:
 
-```text
-$lx-education-diagnosis
-$lx-parent-learning-environment
-$lx-ai-learning-coach
-$lx-institutional-social-coach
-$lx-open-class-ai-diagnosis
-$lx-gamified-learning-design
-$lx-subject-visualization
-$lx-3d-teaching-animation
-```
 
 ## Instalación en Claude Code
 
@@ -123,16 +108,6 @@ cp -R skills/lx-* ~/.claude/skills/
 
 Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación explícita:
 
-```text
-/lx-education-diagnosis
-/lx-parent-learning-environment
-/lx-ai-learning-coach
-/lx-institutional-social-coach
-/lx-open-class-ai-diagnosis
-/lx-gamified-learning-design
-/lx-subject-visualization
-/lx-3d-teaching-animation
-```
 
 ## Sincronización de traducciones
 
