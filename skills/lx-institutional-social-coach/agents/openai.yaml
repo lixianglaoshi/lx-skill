@@ -1,4 +1,0 @@
-interface:
-  display_name: "李翔体制内社交教练"
-  short_description: "体制内与层级组织的向上沟通、同事边界和社交焦虑教练"
-  default_prompt: "使用 $lx-institutional-social-coach 帮我复盘这个体制内或层级组织的人际情境，区分事实、风险和可控行动，并给我可直接使用的话术。"
