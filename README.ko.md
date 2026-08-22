@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
+<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | 한국어
 
@@ -16,6 +16,8 @@
 | `lx-institutional-social-coach` | 상사 보고, 동료와의 경계, 비공식 모임, 사내 정치와 위계적 조직에서의 사회적 불안 |
 | `lx-open-class-ai-diagnosis` | 공개수업에서 AI의 교육적 가치, 근거, 위험과 구체적 개선안을 진단 |
 | `lx-gamified-learning-design` | 게임 메커니즘을 학습 메커니즘으로 바꾸어 개념, 알고리즘, 공간 관계, 인과 관계와 전략을 조작·시각화·전이하게 함 |
+| `lx-subject-visualization` | 학습 주제나 문제를 단일 파일의 상호작용 수업 페이지로 전환: 일반 시각화, 입체기하, 원뿔곡선, 화학 반응의 미시적 시연 포함 |
+| `lx-3d-teaching-animation` | 공간 구조, 기계 전달, 힘과 운동을 일시정지·탐색 가능한 3D 수업 페이지로 제작 |
 
 각 skill은 사용자의 언어에 맞춰 답변합니다. 번역본 사이의 불일치를 막기 위해 실제 skill 로직은 하나의 버전으로 유지합니다.
 
@@ -80,7 +82,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 여섯 개의 Skill을 각각 패키지로 만듭니다.
+WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 여덟 개의 Skill을 각각 패키지로 만듭니다.
 
 ```bash
 mkdir -p workbuddy-packages
@@ -108,6 +110,8 @@ $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
 $lx-gamified-learning-design
+$lx-subject-visualization
+$lx-3d-teaching-animation
 ```
 
 ## Claude Code에 설치
@@ -126,6 +130,8 @@ cp -R skills/lx-* ~/.claude/skills/
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
 /lx-gamified-learning-design
+/lx-subject-visualization
+/lx-3d-teaching-animation
 ```
 
 ## 번역 동기화
