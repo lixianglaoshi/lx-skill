@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
+<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -15,7 +15,8 @@
 | `lx-ai-learning-coach` | Aprendizaje guiado con aclaración de objetivos, una pregunta por turno, pistas graduales, práctica y explicación del alumno |
 | `lx-open-class-ai-diagnosis` | Diagnóstico del valor pedagógico, las evidencias, los riesgos y las mejoras concretas de la IA en una clase abierta |
 | `lx-gamified-learning-design` | Convierte mecánicas de juego en mecanismos de aprendizaje para hacer visibles y manipulables conceptos, algoritmos, relaciones espaciales y estrategias |
-| `lx-subject-visualization` | Convierte temas o problemas en una página didáctica interactiva de un solo archivo: visualización general, geometría espacial, secciones cónicas y reacciones químicas microscópicas |
+| `lx-interactive-teaching-generator` | Entrega directamente una página HTML interactiva, atractiva y de un solo archivo para cualquier tema, con 3D real de Three.js, SVG/D3, KaTeX, deslizadores y comprobación plegable cuando corresponde |
+| `lx-highschool-geometry-chemistry` | Usa cálculo exacto con SymPy para entregar páginas interactivas de un solo archivo sobre geometría espacial, geometría analítica/cónicas y reacciones químicas de bachillerato |
 | `lx-3d-teaching-animation` | Crea una página didáctica 3D que se puede pausar y explorar para estructuras espaciales, transmisión mecánica, fuerzas y movimiento |
 
 Los skills siguen el idioma del usuario. La lógica se mantiene en una sola versión para evitar diferencias entre traducciones.
@@ -41,6 +42,9 @@ Usa $lx-ai-learning-coach para enseñarme SQL mediante práctica guiada.
 Haz una sola pregunta central cada vez y no reveles inmediatamente la respuesta final.
 ```
 
+```text
+Usa $lx-interactive-teaching-generator para crear una página interactiva de funciones lineales. Permite cambiar pendiente e intercepto y entrega directamente un HTML que se pueda abrir, no enlaces ni solo un prompt.
+```
 
 ```text
 Usa $lx-open-class-ai-diagnosis para revisar mi clase abierta. Lee primero mi plan y mis diapositivas y dime si la IA transforma el aprendizaje del alumnado o solo exhibe una herramienta.
@@ -77,7 +81,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los siete skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los ocho skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -98,6 +102,16 @@ cp -R skills/lx-* ~/.agents/skills/
 
 Para un solo proyecto, copia los directorios en `.agents/skills/`. Invocación explícita:
 
+```text
+$lx-education-diagnosis
+$lx-parent-learning-environment
+$lx-ai-learning-coach
+$lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
+$lx-interactive-teaching-generator
+$lx-highschool-geometry-chemistry
+$lx-3d-teaching-animation
+```
 
 ## Instalación en Claude Code
 
@@ -108,6 +122,16 @@ cp -R skills/lx-* ~/.claude/skills/
 
 Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación explícita:
 
+```text
+/lx-education-diagnosis
+/lx-parent-learning-environment
+/lx-ai-learning-coach
+/lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
+/lx-interactive-teaching-generator
+/lx-highschool-geometry-chemistry
+/lx-3d-teaching-animation
+```
 
 ## Sincronización de traducciones
 
