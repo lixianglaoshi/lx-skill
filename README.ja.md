@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
+<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | 日本語 | [한국어](README.ko.md)
 
@@ -13,7 +13,6 @@
 | `lx-education-diagnosis` | 教育全体の診断と、具体的なしつけ・指導上の選択や出来事の振り返り |
 | `lx-parent-learning-environment` | 宿題の催促、比較、端末利用の衝突、曖昧な課題、難易度の不一致、家庭内ルール |
 | `lx-ai-learning-coach` | 目標の明確化、一度に一つの問い、段階的なヒント、練習、教え返し、プロジェクト学習 |
-| `lx-institutional-social-coach` | 上司への報告、同僚との境界線、非公式な会合、職場政治、階層型組織での対人不安 |
 | `lx-open-class-ai-diagnosis` | 公開授業におけるAIの教育的価値、根拠、リスク、具体的な改善を診断 |
 | `lx-gamified-learning-design` | ゲームの仕組みを学習の仕組みに変換し、概念、アルゴリズム、空間関係、因果関係、方略を操作・可視化・転移できるようにする |
 | `lx-subject-visualization` | 学習テーマや問題を単一ファイルの対話型教材ページに変換する。一般可視化、立体幾何、円錐曲線、化学反応の微視的演示に対応 |
@@ -42,10 +41,6 @@ $lx-ai-learning-coach を使い、練習を通してSQLを教えてください�
 一度に中心となる質問を一つだけ出し、最終解答をすぐに示さないでください。
 ```
 
-```text
-$lx-institutional-social-coach を使い、上司への進捗報告を準備してください。
-事実、解釈、正式なリスク、自分でコントロールできる行動を分け、話し方の例を作ってください。
-```
 
 ```text
 $lx-open-class-ai-diagnosis を使い、私の公開授業を診断してください。まず指導案とスライドを読み、AIが生徒の学びを変えているのか、単なるツール展示なのかを確認してください。
@@ -82,7 +77,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。8つの Skill を個別にパッケージ化します。
+WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。7つの Skill を個別にパッケージ化します。
 
 ```bash
 mkdir -p workbuddy-packages
@@ -103,16 +98,6 @@ cp -R skills/lx-* ~/.agents/skills/
 
 プロジェクト単位で使う場合は `.agents/skills/` にコピーします。明示的な呼び出し：
 
-```text
-$lx-education-diagnosis
-$lx-parent-learning-environment
-$lx-ai-learning-coach
-$lx-institutional-social-coach
-$lx-open-class-ai-diagnosis
-$lx-gamified-learning-design
-$lx-subject-visualization
-$lx-3d-teaching-animation
-```
 
 ## Claude Code へのインストール
 
@@ -123,16 +108,6 @@ cp -R skills/lx-* ~/.claude/skills/
 
 プロジェクト単位で使う場合は `.claude/skills/` にコピーします。明示的な呼び出し：
 
-```text
-/lx-education-diagnosis
-/lx-parent-learning-environment
-/lx-ai-learning-coach
-/lx-institutional-social-coach
-/lx-open-class-ai-diagnosis
-/lx-gamified-learning-design
-/lx-subject-visualization
-/lx-3d-teaching-animation
-```
 
 ## 翻訳の同期
 
