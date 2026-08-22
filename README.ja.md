@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
+<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | 日本語 | [한국어](README.ko.md)
 
@@ -15,7 +15,8 @@
 | `lx-ai-learning-coach` | 目標の明確化、一度に一つの問い、段階的なヒント、練習、教え返し、プロジェクト学習 |
 | `lx-open-class-ai-diagnosis` | 公開授業におけるAIの教育的価値、根拠、リスク、具体的な改善を診断 |
 | `lx-gamified-learning-design` | ゲームの仕組みを学習の仕組みに変換し、概念、アルゴリズム、空間関係、因果関係、方略を操作・可視化・転移できるようにする |
-| `lx-subject-visualization` | 学習テーマや問題を単一ファイルの対話型教材ページに変換する。一般可視化、立体幾何、円錐曲線、化学反応の微視的演示に対応 |
+| `lx-interactive-teaching-generator` | 任意の教材テーマに対し、実際の Three.js 3D、SVG/D3、KaTeX、スライダー、折りたたみ確認を必要に応じて使う高品質な単一HTML対話教材を直接納品 |
+| `lx-highschool-geometry-chemistry` | SymPy による厳密計算を用い、高校の立体幾何、解析幾何/円錐曲線、化学反応の単一HTML対話教材を納品 |
 | `lx-3d-teaching-animation` | 空間構造、機械伝達、力と運動を、一時停止して探索できる 3D 教材ページにする |
 
 各 skill は利用者の言語に合わせて回答します。翻訳ごとの差異を防ぐため、skill のロジック自体は一つの版で管理します。
@@ -41,6 +42,9 @@ $lx-ai-learning-coach を使い、練習を通してSQLを教えてください�
 一度に中心となる質問を一つだけ出し、最終解答をすぐに示さないでください。
 ```
 
+```text
+$lx-interactive-teaching-generator を使い、一次関数の対話教材を作ってください。傾きと切片を変え、グラフ・式・現実の意味を同期させ、リンクやプロンプトだけでなく開ける HTML ファイルを直接納品してください。
+```
 
 ```text
 $lx-open-class-ai-diagnosis を使い、私の公開授業を診断してください。まず指導案とスライドを読み、AIが生徒の学びを変えているのか、単なるツール展示なのかを確認してください。
@@ -77,7 +81,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。7つの Skill を個別にパッケージ化します。
+WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。8つの Skill を個別にパッケージ化します。
 
 ```bash
 mkdir -p workbuddy-packages
@@ -98,6 +102,16 @@ cp -R skills/lx-* ~/.agents/skills/
 
 プロジェクト単位で使う場合は `.agents/skills/` にコピーします。明示的な呼び出し：
 
+```text
+$lx-education-diagnosis
+$lx-parent-learning-environment
+$lx-ai-learning-coach
+$lx-open-class-ai-diagnosis
+$lx-gamified-learning-design
+$lx-interactive-teaching-generator
+$lx-highschool-geometry-chemistry
+$lx-3d-teaching-animation
+```
 
 ## Claude Code へのインストール
 
@@ -108,6 +122,16 @@ cp -R skills/lx-* ~/.claude/skills/
 
 プロジェクト単位で使う場合は `.claude/skills/` にコピーします。明示的な呼び出し：
 
+```text
+/lx-education-diagnosis
+/lx-parent-learning-environment
+/lx-ai-learning-coach
+/lx-open-class-ai-diagnosis
+/lx-gamified-learning-design
+/lx-interactive-teaching-generator
+/lx-highschool-geometry-chemistry
+/lx-3d-teaching-animation
+```
 
 ## 翻訳の同期
 
