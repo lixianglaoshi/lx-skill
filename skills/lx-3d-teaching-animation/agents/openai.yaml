@@ -1,0 +1,6 @@
+interface:
+  display_name: "李翔 3D 教学演示动画"
+  short_description: "生成可暂停、可操控的 3D 教学演示网页"
+  default_prompt: "使用 $lx-3d-teaching-animation 把我的教学主题做成可交互的 3D 教学演示；先判断 3D 要让学生看见和操控什么，再生成可直接打开的网页。"
+policy:
+  allow_implicit_invocation: true
