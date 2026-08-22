@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
+<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -13,7 +13,6 @@
 | `lx-education-diagnosis` | Whole-system education diagnosis and a dedicated decision/event review mode for parenting or teaching choices |
 | `lx-parent-learning-environment` | Homework prompting, comparisons, screen conflict, unclear tasks, difficulty mismatch, feedback, and household rules |
 | `lx-ai-learning-coach` | Goal clarification, one-question-at-a-time tutoring, graduated hints, practice, teach-back, and project learning |
-| `lx-institutional-social-coach` | Managing up, workplace boundaries, informal gatherings, office politics, and social anxiety in hierarchical organizations |
 | `lx-open-class-ai-diagnosis` | Diagnose the teaching value, evidence, risks, and actionable revisions of AI in an open class from plans, slides, reflections, and classroom evidence |
 | `lx-gamified-learning-design` | Turn game mechanics into learning mechanics so abstract concepts, algorithms, spatial relations, causality, and strategies become operable, visible, and transferable |
 | `lx-subject-visualization` | Turn a topic or problem into an interactive single-file teaching page, including general visualization, solid geometry, conic sections, and microscopic chemistry reactions |
@@ -61,7 +60,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the eight skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the seven skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -82,16 +81,6 @@ cp -R skills/lx-* ~/.agents/skills/
 
 For a single project, copy them to `.agents/skills/`. Invoke them explicitly with:
 
-```text
-$lx-education-diagnosis
-$lx-parent-learning-environment
-$lx-ai-learning-coach
-$lx-institutional-social-coach
-$lx-open-class-ai-diagnosis
-$lx-gamified-learning-design
-$lx-subject-visualization
-$lx-3d-teaching-animation
-```
 
 ## Install for Claude Code
 
@@ -102,16 +91,6 @@ cp -R skills/lx-* ~/.claude/skills/
 
 For a single project, copy them to `.claude/skills/`. Invoke them explicitly with:
 
-```text
-/lx-education-diagnosis
-/lx-parent-learning-environment
-/lx-ai-learning-coach
-/lx-institutional-social-coach
-/lx-open-class-ai-diagnosis
-/lx-gamified-learning-design
-/lx-subject-visualization
-/lx-3d-teaching-animation
-```
 
 ## Keeping translations in sync
 
@@ -134,9 +113,6 @@ Use $lx-education-diagnosis in education decision and event review mode. I yelle
 Use $lx-ai-learning-coach to teach me SQL through guided practice. Ask one core question at a time and do not reveal the final answer immediately.
 ```
 
-```text
-Use $lx-institutional-social-coach to prepare a progress update for my manager. Separate facts, interpretations, formal risks, and controllable actions, then draft a script.
-```
 
 ```text
 Use $lx-open-class-ai-diagnosis to review my open class. Read my lesson plan and slides first, then tell me whether AI changes student learning or merely displays a tool.
