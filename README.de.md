@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
+<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | Deutsch | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -16,6 +16,8 @@
 | `lx-institutional-social-coach` | Kommunikation nach oben, Grenzen im Kollegium, informelle Termine, Büropolitik und soziale Anspannung in hierarchischen Organisationen |
 | `lx-open-class-ai-diagnosis` | Diagnostik des didaktischen KI-Werts, der Belege, Risiken und konkreten Verbesserungen einer offenen Unterrichtsstunde |
 | `lx-gamified-learning-design` | Spielmechaniken in Lernmechaniken übersetzen, damit abstrakte Begriffe, Algorithmen, Raumbeziehungen und Strategien sichtbar und handelbar werden |
+| `lx-subject-visualization` | Themen oder Aufgaben in interaktive Ein-Datei-Unterrichtsseiten verwandeln: allgemeine Visualisierung, Raumgeometrie, Kegelschnitte und mikroskopische Reaktionen |
+| `lx-3d-teaching-animation` | Pausierbare und erkundbare 3D-Unterrichtsseiten für räumliche Strukturen, mechanische Übertragung, Kräfte und Bewegung erstellen |
 
 Die Skills antworten in der Sprache der Nutzerinnen und Nutzer. Die eigentliche Logik bleibt in einer gemeinsamen Version, damit Übersetzungen nicht auseinanderlaufen.
 
@@ -80,7 +82,7 @@ Unter `Settings → Skills` auf `Refresh` klicken, die Aktivierung prüfen und d
 
 ### Tencent WorkBuddy
 
-WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die sechs Skills einzeln paketieren:
+WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die acht Skills einzeln paketieren:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -108,6 +110,8 @@ $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
 $lx-gamified-learning-design
+$lx-subject-visualization
+$lx-3d-teaching-animation
 ```
 
 ## Installation für Claude Code
@@ -126,6 +130,8 @@ Für ein einzelnes Projekt werden die Ordner nach `.claude/skills/` kopiert. Exp
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
 /lx-gamified-learning-design
+/lx-subject-visualization
+/lx-3d-teaching-animation
 ```
 
 ## Übersetzungen synchron halten
