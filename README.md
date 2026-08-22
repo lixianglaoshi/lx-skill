@@ -1,12 +1,12 @@
 # lx-skill
 
-<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
+<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
 
 简体中文 | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
 `lx-skill` 是一个持续生长的 AI 教育、新时代教育、数字教育与个人成长 Agent Skills 技能包，由李翔老师的乡村教育一线实践、AI赋能教学经验和组织沟通思考提炼而成。它可用于腾讯 WorkBuddy、Kimi Code、ZCode，也兼容 Codex、Claude Code 及其他支持开放 Agent Skills 规范的智能体。
 
-当前包含六个可独立安装的技能：
+当前包含八个可独立安装的技能：
 
 | Skill | 适用场景 |
 | --- | --- |
@@ -16,8 +16,20 @@
 | `lx-institutional-social-coach` | 体制内和层级组织的向上汇报、同事边界、饭局应酬、办公室政治与社交焦虑 |
 | `lx-open-class-ai-diagnosis` | 读取教案、PPT、反思和课堂证据，诊断公开课中AI的教学价值、展示证据、风险与可落实修改 |
 | `lx-gamified-learning-design` | 把游戏机制转译为学习机制，让算理、算法、空间关系、因果关系和策略变成可操作、可视化、可迁移的学习过程 |
+| `lx-subject-visualization` | 把抽象学科主题或题目做成可直接打开的交互教学网页；覆盖通用可视化、高中立体几何、圆锥曲线和化学反应微观演示 |
+| `lx-3d-teaching-animation` | 把空间结构、机械传动、力与运动等做成可暂停、旋转、拆解、预测和解释的 3D 教学演示网页 |
 
 所有技能会跟随用户语言回答，支持简体中文和 English。
+
+## 三个容易混淆的 Skill，怎样自动选择
+
+| 你想得到的结果 | 优先调用 | 典型说法 |
+| --- | --- | --- |
+| 一节游戏化课的任务、关卡、角色、反馈和迁移 | `lx-gamified-learning-design` | “把观察物体做成建造闯关游戏” |
+| 某个学科关系或一道题的互动网页，并保证公式、图形和答案一致 | `lx-subject-visualization` | “做一个可拖动斜率的一次函数网页”“解一道圆锥曲线题” |
+| 必须旋转、暂停、拆解、剖切或按时间观察的空间/运动过程 | `lx-3d-teaching-animation` | “为什么齿轮转向相反”“展示滑轮组受力” |
+
+发生重叠时：游戏需求先由 `lx-gamified-learning-design` 设计机制；“能旋转的立体几何**解题**网页”优先 `lx-subject-visualization` 保证精确，再由 3D Skill 补演示；纯传动、结构、运动和空间过程优先 `lx-3d-teaching-animation`。
 
 ## 设计理念
 
@@ -60,6 +72,16 @@
 先问清年级、学情和设备，再把空间视角变成搭建、投影、预测、验证和纸笔表达；不要先做成答题换皮。
 ```
 
+```text
+使用 $lx-subject-visualization 把初中一次函数做成单文件互动网页。
+学生拖动斜率和截距时，要同时看见图像、解析式、增减变化和真实情境的对应；先给教学设计，再生成网页。
+```
+
+```text
+使用 $lx-3d-teaching-animation 设计“小学科学齿轮传动”教学演示。
+学生要能旋转、暂停并逐段观察动力从主动齿轮传到从动齿轮的方向变化；每一段先让学生预测，再生成可直接打开的网页。
+```
+
 也可以直接用 English 提问，例如：
 
 ```text
@@ -99,7 +121,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### 腾讯 WorkBuddy
 
-WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把六个技能分别打包：
+WorkBuddy 官方采用技能面板上传本地技能包。下面的命令会把八个技能分别打包：
 
 ```bash
 mkdir -p workbuddy-packages
@@ -136,6 +158,8 @@ $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
 $lx-gamified-learning-design
+$lx-subject-visualization
+$lx-3d-teaching-animation
 ```
 
 也可以直接描述问题，由 Codex 根据各 skill 的 `description` 自动选择。若安装后没有出现，重启 Codex。
@@ -165,6 +189,8 @@ cp -R skills/lx-* .claude/skills/
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
 /lx-gamified-learning-design
+/lx-subject-visualization
+/lx-3d-teaching-animation
 ```
 
 ## Windows PowerShell
@@ -226,10 +252,16 @@ lx-skill/
     ├── lx-ai-learning-coach/
     ├── lx-institutional-social-coach/
     ├── lx-open-class-ai-diagnosis/
-    └── lx-gamified-learning-design/
+    ├── lx-gamified-learning-design/
+    ├── lx-subject-visualization/
+    └── lx-3d-teaching-animation/
 ```
 
 每个 skill 文件夹都包含标准 `SKILL.md`、Codex 可选界面元数据 `agents/openai.yaml` 和按需加载的 `references/`。规范见 [Agent Skills specification](https://agentskills.io/specification)。平台安装方式参考 [OpenAI Codex Skills 文档](https://developers.openai.com/codex/skills) 与 [Claude Code Skills 文档](https://code.claude.com/docs/en/skills)。
+
+`lx-subject-visualization` 还包含按许可证保留的开源可视化组件与 NOTICE；分发该 Skill 时请保留其 `licenses/`、`vendor/` 和 `THIRD_PARTY_NOTICES.md`。
+
+`lx-3d-teaching-animation` 是独立编写的 3D 教学动画设计 Skill；它不分发未标注许可证的第三方 CAD 模型、网页查看器或源代码。
 
 每次修改后可用 [tests/evaluation-cases.md](tests/evaluation-cases.md) 进行人工回归测试。
 
@@ -241,4 +273,4 @@ lx-skill/
 
 ## 后续计划
 
-`lx-skill` 将继续增加公开课优化、班主任助手、教师AI学习设计等技能。游戏化学习设计已加入首版，后续会根据更多课堂案例持续迭代。详见 [ROADMAP.md](ROADMAP.md)。
+`lx-skill` 将继续增加公开课优化、班主任助手、教师AI学习设计等技能。游戏化学习设计、学科可视化和 3D 教学演示动画均已加入首版，后续会根据更多课堂案例持续迭代。详见 [ROADMAP.md](ROADMAP.md)。
