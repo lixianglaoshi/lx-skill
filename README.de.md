@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
+<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | Deutsch | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -13,7 +13,6 @@
 | `lx-education-diagnosis` | Ganzheitliche Bildungsdiagnose sowie die Reflexion konkreter Erziehungs- oder Unterrichtsentscheidungen |
 | `lx-parent-learning-environment` | Hausaufgabenroutinen, Ermahnen, Vergleiche, Bildschirmkonflikte, unklare Aufgaben und unpassende Schwierigkeit |
 | `lx-ai-learning-coach` | Zielklärung, jeweils eine Leitfrage, abgestufte Hinweise, Übung, Erklären in eigenen Worten und projektbasiertes Lernen |
-| `lx-institutional-social-coach` | Kommunikation nach oben, Grenzen im Kollegium, informelle Termine, Büropolitik und soziale Anspannung in hierarchischen Organisationen |
 | `lx-open-class-ai-diagnosis` | Diagnostik des didaktischen KI-Werts, der Belege, Risiken und konkreten Verbesserungen einer offenen Unterrichtsstunde |
 | `lx-gamified-learning-design` | Spielmechaniken in Lernmechaniken übersetzen, damit abstrakte Begriffe, Algorithmen, Raumbeziehungen und Strategien sichtbar und handelbar werden |
 | `lx-subject-visualization` | Themen oder Aufgaben in interaktive Ein-Datei-Unterrichtsseiten verwandeln: allgemeine Visualisierung, Raumgeometrie, Kegelschnitte und mikroskopische Reaktionen |
@@ -42,10 +41,6 @@ Nutze $lx-ai-learning-coach, um mir SQL durch angeleitete Übungen beizubringen.
 Stelle jeweils nur eine zentrale Frage und verrate die Endlösung nicht sofort.
 ```
 
-```text
-Nutze $lx-institutional-social-coach, um ein Statusgespräch mit meiner Führungskraft vorzubereiten.
-Trenne Fakten, Deutungen, formale Risiken und kontrollierbare Schritte und formuliere ein Gesprächsskript.
-```
 
 ```text
 Nutze $lx-open-class-ai-diagnosis zur Analyse meiner offenen Unterrichtsstunde. Lies zuerst Unterrichtsplan und Folien und prüfe, ob KI das Lernen verändert oder nur ein Werkzeug zeigt.
@@ -82,7 +77,7 @@ Unter `Settings → Skills` auf `Refresh` klicken, die Aktivierung prüfen und d
 
 ### Tencent WorkBuddy
 
-WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die acht Skills einzeln paketieren:
+WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die sieben Skills einzeln paketieren:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -103,16 +98,6 @@ cp -R skills/lx-* ~/.agents/skills/
 
 Für ein einzelnes Projekt werden die Ordner nach `.agents/skills/` kopiert. Expliziter Aufruf:
 
-```text
-$lx-education-diagnosis
-$lx-parent-learning-environment
-$lx-ai-learning-coach
-$lx-institutional-social-coach
-$lx-open-class-ai-diagnosis
-$lx-gamified-learning-design
-$lx-subject-visualization
-$lx-3d-teaching-animation
-```
 
 ## Installation für Claude Code
 
@@ -123,16 +108,6 @@ cp -R skills/lx-* ~/.claude/skills/
 
 Für ein einzelnes Projekt werden die Ordner nach `.claude/skills/` kopiert. Expliziter Aufruf:
 
-```text
-/lx-education-diagnosis
-/lx-parent-learning-environment
-/lx-ai-learning-coach
-/lx-institutional-social-coach
-/lx-open-class-ai-diagnosis
-/lx-gamified-learning-design
-/lx-subject-visualization
-/lx-3d-teaching-animation
-```
 
 ## Übersetzungen synchron halten
 
