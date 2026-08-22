@@ -11,8 +11,8 @@ description: 为教师、学生和教研员设计并生成可交互的 3D 教学
 
 3D 只解决二维图难以表达的关系：遮挡、前后、内外、空间方位、部件连接、运动链、受力/能量流、微观结构或随时间变化的过程。
 
-- 若核心是函数、图表、平面坐标、统计关系，优先使用 `lx-subject-visualization` 的 2D 互动页面，不为“高级感”强加 3D。
-- 若核心是严谨的高中立体几何、解析几何或化学反应精确计算，转用 `lx-subject-visualization` 对应的精确模块；本 Skill 可以为其结果补充空间演示。
+- 若核心是函数、图表、平面坐标、统计关系，优先使用 `lx-interactive-teaching-generator` 的 2D 互动页面，不为“高级感”强加 3D。
+- 若核心是严谨的高中立体几何、解析几何或化学反应精确计算，转用 `lx-highschool-geometry-chemistry` 对应的精确模块；本 Skill 可以为其结果补充空间演示。
 - 若用户要设计整节课的游戏任务、关卡、积分或班级运行机制，转用 `lx-gamified-learning-design`；确定某一个要演示的对象后再回来。
 
 ## 与相邻 LX Skills 的优先级
@@ -22,10 +22,11 @@ description: 为教师、学生和教研员设计并生成可交互的 3D 教学
 | 用户真正要的结果 | 优先 Skill | 例子 |
 | --- | --- | --- |
 | 完整游戏机制、关卡与学习反馈 | `lx-gamified-learning-design` | “把观察物体做成建造闯关游戏” |
-| 题目求解、函数/图像、精确公式或化学配平 | `lx-subject-visualization` | “解正方体线面角题并保证答案正确” |
+| 函数/图像的互动单页 | `lx-interactive-teaching-generator` | “做一个能拖动斜率的函数网页” |
+| 高中题目求解、精确公式或化学配平 | `lx-highschool-geometry-chemistry` | “解正方体线面角题并保证答案正确” |
 | 可旋转、暂停、分步观察的动态空间/运动过程 | **lx-3d-teaching-animation** | “为什么两个啮合齿轮转向相反” |
 
-“能旋转的立体几何解题网页”仍优先 `lx-subject-visualization`，因为精确题解优先于动画；当公式与答案已经确定、但学生仍需理解空间关系时，再用本 Skill 补一段 3D 演示。
+“能旋转的立体几何解题网页”仍优先 `lx-highschool-geometry-chemistry`，因为精确题解优先于动画；当公式与答案已经确定、但学生仍需理解空间关系时，再用本 Skill 补一段 3D 演示。
 
 ## 先弄清要学生学会什么
 
