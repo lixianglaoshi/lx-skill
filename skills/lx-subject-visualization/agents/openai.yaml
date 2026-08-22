@@ -1,0 +1,6 @@
+interface:
+  display_name: "李翔学科可视化"
+  short_description: "生成可交互、可验证的单文件学科教学网页"
+  default_prompt: "使用 $lx-subject-visualization 把我的教学主题或题目做成可交互教学网页；先识别学科、学习目标与学生难点，再选择合适的可视化方式。"
+policy:
+  allow_implicit_invocation: true
