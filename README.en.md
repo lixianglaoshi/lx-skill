@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
+<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -16,6 +16,8 @@
 | `lx-institutional-social-coach` | Managing up, workplace boundaries, informal gatherings, office politics, and social anxiety in hierarchical organizations |
 | `lx-open-class-ai-diagnosis` | Diagnose the teaching value, evidence, risks, and actionable revisions of AI in an open class from plans, slides, reflections, and classroom evidence |
 | `lx-gamified-learning-design` | Turn game mechanics into learning mechanics so abstract concepts, algorithms, spatial relations, causality, and strategies become operable, visible, and transferable |
+| `lx-subject-visualization` | Turn a topic or problem into an interactive single-file teaching page, including general visualization, solid geometry, conic sections, and microscopic chemistry reactions |
+| `lx-3d-teaching-animation` | Create a pausable, explorable 3D teaching page for spatial structure, mechanical transmission, forces, motion, and other processes students need to inspect |
 
 All skills follow the user's language and support both English and Simplified Chinese.
 
@@ -59,7 +61,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the six skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the eight skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -87,6 +89,8 @@ $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
 $lx-gamified-learning-design
+$lx-subject-visualization
+$lx-3d-teaching-animation
 ```
 
 ## Install for Claude Code
@@ -105,6 +109,8 @@ For a single project, copy them to `.claude/skills/`. Invoke them explicitly wit
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
 /lx-gamified-learning-design
+/lx-subject-visualization
+/lx-3d-teaching-animation
 ```
 
 ## Keeping translations in sync
@@ -139,6 +145,16 @@ Use $lx-open-class-ai-diagnosis to review my open class. Read my lesson plan and
 ```text
 Use $lx-gamified-learning-design to design a learning game for spatial views.
 Ask about grade, learning difficulty, and available devices first; make students build, predict, verify, and explain rather than merely answer a quiz.
+```
+
+```text
+Use $lx-subject-visualization to make an interactive page for linear functions.
+When students change slope and intercept, synchronize the graph, equation, and real-world meaning; include prediction and verification, not a quiz skin.
+```
+
+```text
+Use $lx-3d-teaching-animation to make a 3D gear-transmission lesson for elementary science.
+Let students pause, rotate, and predict the direction of each gear before seeing a step-by-step explanation.
 ```
 
 ## Repository structure
