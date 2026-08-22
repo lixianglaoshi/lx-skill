@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
+<!-- i18n-source-sha256: 34c3d620048ea435e658f55171b7f53b7da51746d34c674b345484e97fc37a59 -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | 한국어
 
@@ -13,7 +13,6 @@
 | `lx-education-diagnosis` | 교육 시스템 전체 진단과 구체적인 양육·수업 선택 또는 사건의 회고 |
 | `lx-parent-learning-environment` | 숙제 재촉, 비교, 디지털 기기 갈등, 모호한 과제, 난이도 불일치와 가정 규칙 |
 | `lx-ai-learning-coach` | 목표 확인, 한 번에 하나의 질문, 단계별 힌트, 연습, 설명하기와 프로젝트 학습 |
-| `lx-institutional-social-coach` | 상사 보고, 동료와의 경계, 비공식 모임, 사내 정치와 위계적 조직에서의 사회적 불안 |
 | `lx-open-class-ai-diagnosis` | 공개수업에서 AI의 교육적 가치, 근거, 위험과 구체적 개선안을 진단 |
 | `lx-gamified-learning-design` | 게임 메커니즘을 학습 메커니즘으로 바꾸어 개념, 알고리즘, 공간 관계, 인과 관계와 전략을 조작·시각화·전이하게 함 |
 | `lx-subject-visualization` | 학습 주제나 문제를 단일 파일의 상호작용 수업 페이지로 전환: 일반 시각화, 입체기하, 원뿔곡선, 화학 반응의 미시적 시연 포함 |
@@ -42,10 +41,6 @@ $lx-ai-learning-coach를 사용해 연습 중심으로 SQL을 가르쳐 주세�
 한 번에 핵심 질문 하나만 하고 최종 답을 바로 알려주지 마세요.
 ```
 
-```text
-$lx-institutional-social-coach를 사용해 상사에게 진행 상황을 보고할 준비를 해 주세요.
-사실, 해석, 공식적 위험과 통제 가능한 행동을 구분하고 실제로 말할 문장을 작성해 주세요.
-```
 
 ```text
 $lx-open-class-ai-diagnosis를 사용해 제 공개수업을 진단해 주세요. 먼저 수업안과 슬라이드를 읽고 AI가 학생 학습을 바꾸는지, 단순히 도구를 보여 주는지 판단해 주세요.
@@ -82,7 +77,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 여덟 개의 Skill을 각각 패키지로 만듭니다.
+WorkBuddy는 Skills 패널에서 로컬 Skill 패키지를 가져옵니다. 일곱 개의 Skill을 각각 패키지로 만듭니다.
 
 ```bash
 mkdir -p workbuddy-packages
@@ -103,16 +98,6 @@ cp -R skills/lx-* ~/.agents/skills/
 
 한 프로젝트에서만 사용할 경우 `.agents/skills/`에 복사합니다. 직접 호출하는 방법:
 
-```text
-$lx-education-diagnosis
-$lx-parent-learning-environment
-$lx-ai-learning-coach
-$lx-institutional-social-coach
-$lx-open-class-ai-diagnosis
-$lx-gamified-learning-design
-$lx-subject-visualization
-$lx-3d-teaching-animation
-```
 
 ## Claude Code에 설치
 
@@ -123,16 +108,6 @@ cp -R skills/lx-* ~/.claude/skills/
 
 한 프로젝트에서만 사용할 경우 `.claude/skills/`에 복사합니다. 직접 호출하는 방법:
 
-```text
-/lx-education-diagnosis
-/lx-parent-learning-environment
-/lx-ai-learning-coach
-/lx-institutional-social-coach
-/lx-open-class-ai-diagnosis
-/lx-gamified-learning-design
-/lx-subject-visualization
-/lx-3d-teaching-animation
-```
 
 ## 번역 동기화
 
