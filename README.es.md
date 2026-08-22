@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: ad9f8ba3ed13dc867d7bb3f2f152cb3fc07f3af4173fbc3d11d7cfb1eb3114d4 -->
+<!-- i18n-source-sha256: 8f7ea09654cb0bb0de19cfc653eec692d2bd0e04475dc18457e54d17f358ecc2 -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -16,6 +16,8 @@
 | `lx-institutional-social-coach` | Comunicación ascendente, límites laborales, política de oficina y ansiedad social en instituciones u organizaciones jerárquicas |
 | `lx-open-class-ai-diagnosis` | Diagnóstico del valor pedagógico, las evidencias, los riesgos y las mejoras concretas de la IA en una clase abierta |
 | `lx-gamified-learning-design` | Convierte mecánicas de juego en mecanismos de aprendizaje para hacer visibles y manipulables conceptos, algoritmos, relaciones espaciales y estrategias |
+| `lx-subject-visualization` | Convierte temas o problemas en una página didáctica interactiva de un solo archivo: visualización general, geometría espacial, secciones cónicas y reacciones químicas microscópicas |
+| `lx-3d-teaching-animation` | Crea una página didáctica 3D que se puede pausar y explorar para estructuras espaciales, transmisión mecánica, fuerzas y movimiento |
 
 Los skills siguen el idioma del usuario. La lógica se mantiene en una sola versión para evitar diferencias entre traducciones.
 
@@ -80,7 +82,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los seis skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los ocho skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -108,6 +110,8 @@ $lx-ai-learning-coach
 $lx-institutional-social-coach
 $lx-open-class-ai-diagnosis
 $lx-gamified-learning-design
+$lx-subject-visualization
+$lx-3d-teaching-animation
 ```
 
 ## Instalación en Claude Code
@@ -126,6 +130,8 @@ Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación e
 /lx-institutional-social-coach
 /lx-open-class-ai-diagnosis
 /lx-gamified-learning-design
+/lx-subject-visualization
+/lx-3d-teaching-animation
 ```
 
 ## Sincronización de traducciones
