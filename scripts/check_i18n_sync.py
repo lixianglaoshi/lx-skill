@@ -28,6 +28,7 @@ SKILL_IDS = (
     "lx-interactive-teaching-generator",
     "lx-highschool-geometry-chemistry",
     "lx-3d-teaching-animation",
+    "lx-gesture-teaching-interaction",
 )
 MARKER_PATTERN = re.compile(
     r"<!-- i18n-source-sha256: (?P<hash>[0-9a-f]{64}|PLACEHOLDER) -->"
