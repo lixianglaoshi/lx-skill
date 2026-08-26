@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
+<!-- i18n-source-sha256: 6bee247a48358736eecb3a48dd5b1e084d4516e320d9435ae545c4458fb1131a -->
 
 [简体中文](README.md) | English | [Español](README.es.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -18,6 +18,7 @@
 | `lx-interactive-teaching-generator` | Directly deliver a polished, openable, single-file interactive HTML page for any teaching topic, using genuine Three.js 3D, SVG/D3, KaTeX, sliders, and a collapsible check when appropriate |
 | `lx-highschool-geometry-chemistry` | Use SymPy-backed exact computation to deliver a single-file interactive page for high-school solid geometry, analytic geometry/conic sections, and chemistry reactions |
 | `lx-3d-teaching-animation` | Create a pausable, explorable 3D teaching page for spatial structure, mechanical transmission, forces, motion, and other processes students need to inspect |
+| `lx-gesture-teaching-interaction` | Deliver a cinematic single-file hand-gesture teaching page: one simple signature gesture directly grabs, pulls, pushes, or reshapes 3D models and particles |
 
 All skills follow the user's language and support both English and Simplified Chinese.
 
@@ -61,7 +62,7 @@ Open `Settings → Skills`, select `Refresh`, verify that the skills are enabled
 
 ### Tencent WorkBuddy
 
-WorkBuddy imports local skill packages through its Skills panel. Package the eight skills separately:
+WorkBuddy imports local skill packages through its Skills panel. Package the nine skills separately:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -91,6 +92,7 @@ $lx-gamified-learning-design
 $lx-interactive-teaching-generator
 $lx-highschool-geometry-chemistry
 $lx-3d-teaching-animation
+$lx-gesture-teaching-interaction
 ```
 
 ## Install for Claude Code
@@ -111,6 +113,7 @@ For a single project, copy them to `.claude/skills/`. Invoke them explicitly wit
 /lx-interactive-teaching-generator
 /lx-highschool-geometry-chemistry
 /lx-3d-teaching-animation
+/lx-gesture-teaching-interaction
 ```
 
 ## Keeping translations in sync
@@ -154,6 +157,10 @@ Use $lx-highschool-geometry-chemistry to solve an ellipse focal-chord range prob
 ```text
 Use $lx-3d-teaching-animation to make a 3D gear-transmission lesson for elementary science.
 Let students pause, rotate, and predict the direction of each gear before seeing a step-by-step explanation.
+```
+
+```text
+Use $lx-gesture-teaching-interaction for rice planting. Offer no more than three simple hero interactions; after I choose “pinch to sow,” let my hand directly scatter seeds over 3D field rows. Deliver an openable single HTML file, not a numeric-control page.
 ```
 
 ## Repository structure
