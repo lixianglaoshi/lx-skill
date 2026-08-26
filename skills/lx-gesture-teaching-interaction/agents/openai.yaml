@@ -1,0 +1,6 @@
+interface:
+  display_name: "lx 手势互动教学"
+  short_description: "一个主手势直接操控3D模型或粒子的炫酷教学HTML"
+  default_prompt: "使用 $lx-gesture-teaching-interaction 把太阳系做成电影感、可教学的单文件 HTML。先给我最多三张简单的“主动作—主画面”卡片，例如捏合拖动地球；我选一个后，只围绕它完成真实 3D 模型与粒子互动。"
+policy:
+  allow_implicit_invocation: true
