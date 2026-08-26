@@ -12,6 +12,7 @@
 - `lx-interactive-teaching-generator`：任意教学主题直接生成高质感、可打开的单文件互动 HTML；保留真实 Three.js 3D、SVG/D3、KaTeX、滑块、播放与可折叠检验，禁止只交网址或提示词。
 - `lx-highschool-geometry-chemistry`：用 SymPy 精确计算生成高中立体几何、解析几何/圆锥曲线与化学反应的单文件互动题解或微观演示；题面、推导、答案和交互数据同源，并保留 edulab 的 Apache-2.0 许可证与 NOTICE。
 - `lx-3d-teaching-animation`：独立生成可暂停、旋转、剖切、拆解和分步观察的 3D 教学演示网页；把空间、运动、结构与因果关系转成学生可预测、可验证、可迁移的学习动作，默认适配大屏和小组轮流课堂。
+- `lx-gesture-teaching-interaction`：用一个简单招牌手势直接操控 3D 模型或粒子，例如捏合撒种、两指牵引粒子、掌心扰动磁场或双手展开结构；交付电影感单 HTML，公式与读数只作为操控结果，不把摄像头手势降级为数字滑块。
 
 ## 下一阶段候选
 
