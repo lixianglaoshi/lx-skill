@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
+<!-- i18n-source-sha256: 6bee247a48358736eecb3a48dd5b1e084d4516e320d9435ae545c4458fb1131a -->
 
 [简体中文](README.md) | [English](README.en.md) | Español | [Deutsch](README.de.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -18,6 +18,7 @@
 | `lx-interactive-teaching-generator` | Entrega directamente una página HTML interactiva, atractiva y de un solo archivo para cualquier tema, con 3D real de Three.js, SVG/D3, KaTeX, deslizadores y comprobación plegable cuando corresponde |
 | `lx-highschool-geometry-chemistry` | Usa cálculo exacto con SymPy para entregar páginas interactivas de un solo archivo sobre geometría espacial, geometría analítica/cónicas y reacciones químicas de bachillerato |
 | `lx-3d-teaching-animation` | Crea una página didáctica 3D que se puede pausar y explorar para estructuras espaciales, transmisión mecánica, fuerzas y movimiento |
+| `lx-gesture-teaching-interaction` | Entrega una página didáctica cinematográfica de un solo HTML: un gesto sencillo agarra, tira, empuja o transforma directamente modelos 3D y partículas |
 
 Los skills siguen el idioma del usuario. La lógica se mantiene en una sola versión para evitar diferencias entre traducciones.
 
@@ -81,7 +82,7 @@ Abre `Settings → Skills`, pulsa `Refresh`, comprueba que los skills estén hab
 
 ### Tencent WorkBuddy
 
-WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los ocho skills por separado:
+WorkBuddy importa paquetes locales desde su panel de skills. Empaqueta los nueve skills por separado:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -111,6 +112,7 @@ $lx-gamified-learning-design
 $lx-interactive-teaching-generator
 $lx-highschool-geometry-chemistry
 $lx-3d-teaching-animation
+$lx-gesture-teaching-interaction
 ```
 
 ## Instalación en Claude Code
@@ -131,6 +133,7 @@ Para un solo proyecto, copia los directorios en `.claude/skills/`. Invocación e
 /lx-interactive-teaching-generator
 /lx-highschool-geometry-chemistry
 /lx-3d-teaching-animation
+/lx-gesture-teaching-interaction
 ```
 
 ## Sincronización de traducciones
