@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
+<!-- i18n-source-sha256: 6bee247a48358736eecb3a48dd5b1e084d4516e320d9435ae545c4458fb1131a -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | [Deutsch](README.de.md) | 日本語 | [한국어](README.ko.md)
 
@@ -18,6 +18,7 @@
 | `lx-interactive-teaching-generator` | 任意の教材テーマに対し、実際の Three.js 3D、SVG/D3、KaTeX、スライダー、折りたたみ確認を必要に応じて使う高品質な単一HTML対話教材を直接納品 |
 | `lx-highschool-geometry-chemistry` | SymPy による厳密計算を用い、高校の立体幾何、解析幾何/円錐曲線、化学反応の単一HTML対話教材を納品 |
 | `lx-3d-teaching-animation` | 空間構造、機械伝達、力と運動を、一時停止して探索できる 3D 教材ページにする |
+| `lx-gesture-teaching-interaction` | 一つの簡単なジェスチャーで 3D モデルや粒子を直接つかむ・引く・押す・変形する、映画的な単一 HTML 教材ページを作成 |
 
 各 skill は利用者の言語に合わせて回答します。翻訳ごとの差異を防ぐため、skill のロジック自体は一つの版で管理します。
 
@@ -81,7 +82,7 @@ cp -R skills/lx-* ~/.zcode/skills/
 
 ### Tencent WorkBuddy
 
-WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。8つの Skill を個別にパッケージ化します。
+WorkBuddy は Skills パネルからローカル Skill パッケージを読み込みます。9つの Skill を個別にパッケージ化します。
 
 ```bash
 mkdir -p workbuddy-packages
@@ -111,6 +112,7 @@ $lx-gamified-learning-design
 $lx-interactive-teaching-generator
 $lx-highschool-geometry-chemistry
 $lx-3d-teaching-animation
+$lx-gesture-teaching-interaction
 ```
 
 ## Claude Code へのインストール
@@ -131,6 +133,7 @@ cp -R skills/lx-* ~/.claude/skills/
 /lx-interactive-teaching-generator
 /lx-highschool-geometry-chemistry
 /lx-3d-teaching-animation
+/lx-gesture-teaching-interaction
 ```
 
 ## 翻訳の同期
