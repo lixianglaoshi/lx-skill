@@ -1,6 +1,6 @@
 # lx-skill
 
-<!-- i18n-source-sha256: 23898433bfaca1bb2cb669bef806c6153d7e73416ac9e62891f2f84958efdbfb -->
+<!-- i18n-source-sha256: 6bee247a48358736eecb3a48dd5b1e084d4516e320d9435ae545c4458fb1131a -->
 
 [简体中文](README.md) | [English](README.en.md) | [Español](README.es.md) | Deutsch | [日本語](README.ja.md) | [한국어](README.ko.md)
 
@@ -18,6 +18,7 @@
 | `lx-interactive-teaching-generator` | Liefert direkt eine hochwertige, öffnungsfähige interaktive HTML-Einzelseite für jedes Unterrichtsthema – je nach Thema mit echtem Three.js-3D, SVG/D3, KaTeX, Reglern und einklappbarer Überprüfung |
 | `lx-highschool-geometry-chemistry` | Nutzt exakte SymPy-Berechnungen für interaktive Ein-Datei-Seiten zu Raumgeometrie, analytischer Geometrie/Kegelschnitten und chemischen Reaktionen der Oberstufe |
 | `lx-3d-teaching-animation` | Pausierbare und erkundbare 3D-Unterrichtsseiten für räumliche Strukturen, mechanische Übertragung, Kräfte und Bewegung erstellen |
+| `lx-gesture-teaching-interaction` | Eine filmische Einzel-HTML-Unterrichtsseite liefern, bei der eine einfache Geste 3D-Modelle und Partikel direkt greift, zieht, schiebt oder umformt |
 
 Die Skills antworten in der Sprache der Nutzerinnen und Nutzer. Die eigentliche Logik bleibt in einer gemeinsamen Version, damit Übersetzungen nicht auseinanderlaufen.
 
@@ -81,7 +82,7 @@ Unter `Settings → Skills` auf `Refresh` klicken, die Aktivierung prüfen und d
 
 ### Tencent WorkBuddy
 
-WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die acht Skills einzeln paketieren:
+WorkBuddy importiert lokale Skill-Pakete über das Skills-Panel. Die neun Skills einzeln paketieren:
 
 ```bash
 mkdir -p workbuddy-packages
@@ -111,6 +112,7 @@ $lx-gamified-learning-design
 $lx-interactive-teaching-generator
 $lx-highschool-geometry-chemistry
 $lx-3d-teaching-animation
+$lx-gesture-teaching-interaction
 ```
 
 ## Installation für Claude Code
@@ -131,6 +133,7 @@ Für ein einzelnes Projekt werden die Ordner nach `.claude/skills/` kopiert. Exp
 /lx-interactive-teaching-generator
 /lx-highschool-geometry-chemistry
 /lx-3d-teaching-animation
+/lx-gesture-teaching-interaction
 ```
 
 ## Übersetzungen synchron halten
