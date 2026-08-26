@@ -12,11 +12,14 @@ description: 为任意教学主题直接交付一个高质感、可打开的单�
 | 用户要的结果 | 优先 Skill |
 | --- | --- |
 | 直接得到一个高质感、可操作的单文件互动教学网页 | **本 Skill** |
+| 需要摄像头手势直接抓、拉、推 3D 模型或粒子 | `lx-gesture-teaching-interaction` |
 | 高中立体几何、圆锥曲线或化学反应题，且答案必须精确可核 | `lx-highschool-geometry-chemistry` |
 | 整节课的关卡、任务、角色、段位和迁移设计 | `lx-gamified-learning-design` |
 | 要围绕预测、暂停、拆解和课堂提问设计慢速 3D 教学过程 | `lx-3d-teaching-animation` |
 
 本 Skill 的优势是“一句话主题也能直接出一个能玩、能演示、视觉完成度高的互动页”。不要为了避免与相邻 Skill 重叠而删掉真实 3D、交互控件或视觉表现。
+
+用户明确提出摄像头、手势、MediaPipe、手掌/捏合/拇指控制等需求时，优先转用 `lx-gesture-teaching-interaction`：它要求手势直接抓、拉、推模型或扰动粒子，读数只作为结果，并保证摄像头权限、识别防抖和鼠标/键盘替代。若用户只要鼠标、触屏或按钮互动，继续由本 Skill 直接完成。
 
 ## 不可退让的交付规则
 
